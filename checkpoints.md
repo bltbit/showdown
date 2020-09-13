@@ -24,6 +24,10 @@ http://github.com/bltbit/showdown/tree/checkpoint-10
 
 ## Steps:
 
+- How this course is structured - philosophy of small iterations
+- Introduce the BFD
+- Introduce VSCode and essential plugins
+- Introduce node command line
 - Try creating your own Ionic project
   - Open your command line interface (terminal)
   - `nvm use 12.14.1`
@@ -43,11 +47,14 @@ http://github.com/bltbit/showdown/tree/checkpoint-10
   - `npm i`
   - `npm run start`
   - Desktop Victory! http://localhost:3000
+- Introduce `package.json`
+- Introduce utility scripts to maintain merge chain
+- Introduce `prettier` and `prettier-plugin-organize-imports`
 - Do some physical device testing
   - `ngrok http 3000`
   - Desktop SSL Victory! `https://<something>.ngrok.io`
   - Mobile Device Victory! `https://<something>.ngrok.io`
-- Push your `myshowdown` branch to your github fork
+- Push your `my-checkpoint-10` branch to your github fork
   - `git push`
 
 Congratulations, you have forked a github project, run a modern responsive Progressive Web Application, and performed physical device testing. Go eat a Jolly Rancher, you've earned it. If you're a [BitBlt Patreon supporter](https://www.patreon.com/bltbit) at any level, DM me your physical address on Patreon and and I will mail you one Jolly Rancher in the flavor of your choice of whatever I have, including rare ones. I know you might think green apple is the best flavor. But if you choose grape your cherry, I will know how serious you are about learning to program.
@@ -106,6 +113,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-20
 - Templatize Firebase config
   - Copy `.firebaserc` to `.firebaserc.example`
   - Add `.firebaserc` to `.gitignore`
+- Introduce `nvm` and node versioning
 - Add Node v8 to `functions`
   - `cd functions`
   - `echo 8.15.0 > .nvmrc`
@@ -153,16 +161,3 @@ http://github.com/bltbit/showdown/tree/checkpoint-30
   - For the base branch, choose `master`
 
 How awesome are you!! You just legitimately made a contribution to an open source project. Put that on your resume. Seriously, you just forked a repo, made a change, and sent a pull request. That's a huge flex!
-
-# Checkpoint 20 - Add course files
-
-http://github.com/bltbit/showdown/tree/checkpoint-20`
-
-- How this course is structured - philosophy of small iterations
-- Introduce utility scripts to maintain rebase chain
-- Introduce node command line
-- Introduce VSCode and essential plugins
-- Introduce `prettier` and `prettier-plugin-organize-imports`
-- Introduce `nvm` and node versioning
-- Introduce `package.json` scripts
-- Introduce the BFD
