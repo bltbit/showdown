@@ -1,15 +1,19 @@
-import React from 'react';
-import './ExploreContainer.css';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
+import React from 'react'
 
-interface ContainerProps { }
+interface ContainerProps {}
+
+const styling = css({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+})
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
-  return (
-    <div className="container">
-      <strong>Ready to create an app?</strong>
-      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    </div>
-  );
-};
+  return <div css={styling}>Showdown is about to begin.</div>
+}
 
-export default ExploreContainer;
+export default ExploreContainer
