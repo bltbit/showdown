@@ -1,13 +1,13 @@
 # TOC
 
-- [10 - Boilerplate and Physical Device Testing](#checkpoint-10)
+- [10 - Boilerplate and Mobile Device Testing](#checkpoint-10)
 - [20 - Firebase Initialization and Deployment](#checkpoint-20)
 - [30 - Your First Pull Request](#checkpoint-30)
 - [40 - Making a Game](#checkpoint-40)
 
 ---
 
-# [10 - Boilerplate and Physical Device Testing](#checkpoint-10)
+# [10 - Boilerplate and Mobile Device Testing](#checkpoint-10)
 
 http://github.com/bltbit/showdown/tree/checkpoint-10
 
@@ -59,7 +59,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-10
 - Introduce `package.json`
 - Introduce utility scripts to maintain merge chain
 - Introduce `prettier` and `prettier-plugin-organize-imports`
-- Do some physical device testing
+- Do some mobile device testing
   - `ngrok http 3000`
   - Desktop SSL Victory! `https://<something>.ngrok.io`
   - Mobile Device Victory! `https://<something>.ngrok.io`
@@ -68,7 +68,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-10
 
 ## Review
 
-Congratulations, you have forked a github project, run a modern responsive Progressive Web Application, and performed physical device testing. Go eat a Jolly Rancher, you've earned it. If you're a [BitBlt Patreon supporter](https://www.patreon.com/bltbit) at any level, DM me your physical address on Patreon and and I will mail you one Jolly Rancher in the flavor of your choice of whatever I have, including rare ones. I know you might think green apple is the best flavor. But if you choose grape your cherry, I will know how serious you are about learning to program.
+Congratulations, you have forked a github project, run a modern responsive Progressive Web Application, and performed mobile device testing. Go eat a Jolly Rancher, you've earned it. If you're a [BitBlt Patreon supporter](https://www.patreon.com/bltbit) at any level, DM me your physical address on Patreon and and I will mail you one Jolly Rancher in the flavor of your choice of whatever I have, including rare ones. I know you might think green apple is the best flavor. But if you choose grape your cherry, I will know how serious you are about learning to program.
 
 ---
 
@@ -208,9 +208,9 @@ git checkout -b my-checkpoint-40 my-checkpoint-30
 - We'll take this from a mobile Progressive Web App all the way to the Apple and Google app stores (optional)
 - You'll learn a ton of relevant techniques, gain skills, and experience at the same time. You'll ship something, and that's impressive.
 - `cd pwa`
-- Set up an `ngrok` shortcut to make it easy. We're going ot be doing a lot of physical device testing.
+- Set up an `ngrok` shortcut to make it easy. We're going ot be doing a lot of mobile device testing.
   - If you want to pay for ngrok, you can choose your own subdomain. I don't think you need it. Just copy the URL into your shared phone notes.
-- Why is physical device testing so important, so early? Check it out, there's already a problem.
+- Why is mobile device testing so important, so early? Check it out, there's already a problem.
   - On Mobile Safari (iOS), there is a behavior called `overscroll` where the view bounces a bit when you swipe. That might be okay for a web page, but we don't want our app or mobile game to feel that way.
   - Disable overscroll
 - Create a blank canvas
@@ -261,7 +261,7 @@ git checkout -b my-checkpoint-50 my-checkpoint-40
 - Understand event callbacks
 - Open the Chrome debugger
   - Observe the console logging area
-- Physical device testing
+- Mobile device testing
   - Here's how to do it on iOS https://appletoolbox.com/use-web-inspector-debug-mobile-safari/
   - You may need to figure out what it is for your phone and devbox
 
@@ -332,6 +332,46 @@ Wow! You just learned how to edit sounds like a pro, which basically means you c
 Do you own a gun or several? Go squeeze off a few rounds this weekend and record it. Record other gun sounds too, like various clicks and reloading. Then, upload it to Freesounds and add a section to our `readme.md` under a heading of "Origianl Student Sounds". Send a pull request! If you do this and it's a clean recording, I'll give you 1 year of `idkfa` on [BitBlt Patron](https://www.patreon.com/bltbit).
 
 ---
+
+# [70 - Something's Wrong... More mobile device testing](#checkpoint-70)
+
+http://github.com/bltbit/showdown/tree/checkpoint-70
+
+> Just when I thought I was out, they pull me back in.
+> _~Michael Corleone_
+
+## Objectives
+
+- Make the gunshot sound more responsive on mobile devices
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-70 my-checkpoint-60
+```
+
+## Steps
+
+- `npm run ngrok`
+- Tap mobile device screen to hear gunshot
+- Notice that there is a slight (usually 300ms) delay between the tap and the sound. We can do better!
+- This is a somewhat infamous problem
+- Move to `onTouchStart`
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-70`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+You just learned the difference between `onClick` and `onTouchStart`. While `onClick` might be fine for a lot of purposes, only `onTouchStart` can give the instant feedback we need in a game.
+
+---
+
 # [XX - Template](#checkpoint-XX)
 
 http://github.com/bltbit/showdown/tree/checkpoint-XX

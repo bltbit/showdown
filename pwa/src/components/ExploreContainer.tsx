@@ -23,7 +23,7 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
     howlRef.current?.play()
   }
   return (
-    <div css={styling} onClick={handleTriggerPull}>
+    <div css={styling} onTouchStart={handleTriggerPull}>
       Showdown is about to begin.
     </div>
   )
