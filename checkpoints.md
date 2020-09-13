@@ -76,10 +76,41 @@ http://github.com/bltbit/showdown/tree/checkpoint-20
 - `git checkout my-checkpoint-10`
 - `git checkout -b my-checkpoint-20`
 - Move app into `pwa` subfolder
-- Create Firebase project
+  - Duplicate `package.json` and `.gitignore`
+    - Add `.firebase` to `.gitignore`
+  - Move `public`, `src`, `*.json`
+  - Remove `rebase` script from `pwa/package.json`
+  - `cd pwa`
+  - `npm i`
+  - `cd ..`
+  - Remove all `dependencies` from `package.json`
+  - `npm i -D typescript`
+  - Remove all scripts except `rebase` from `package.json`
+- Create Firebase project https://console.firebase.google.com/
+  - Create Firestore database (`test mode`)
+- Install firebase tools
+  - `npm i -g firebase-tools`
 - Initialize Firebase
+  - `firebase init`
+    - Choose `Firestore`, `Functions`, `Hosting`, `Storage`, `Emulators`
+    - Choose `Use an existing project` and choose your project
+    - Accept default file locations
+    - Choose `Typescript` for language
+    - `Y` for `TSLint`
+    - `Y` for `Install dependencies`
+    - `pwa/build` for the `public directory`
+    - `Y` for `Configure as a single-page app`
+    - `N` for overwriting `pwa/build/index.html`
+    - Accept default `storage.rules` path
+    - Enable `Functions`, `Firestore`, and `Hosting` emulators
+    - Accept all following defaults
+    - `Y` to download emulators
 - Deploy to Firebase
-- Deployment Victory! `https://<projectname>.firebase.io`
+  - `cd pwa`
+  - `npm run build`
+  - `cd ..`
+  - `firebase deploy --only hosting`
+- Deployment Victory! `https://<project-id>.web.app/home`
 - Commit your changes using VSCode
 - Push your changes using VSCode
 - Compare your branch to the official `checkpoint-20` branch. See any differences? Correct them.
