@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import React from 'react'
+import { Howl } from 'howler'
+import React, { useRef } from 'react'
 
 interface ContainerProps {}
 
@@ -13,11 +14,16 @@ const styling = css({
 })
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
-  const handleClick = () => {
-    console.log('Click')
+  const howlRef = useRef(
+    new Howl({
+      src: ['./assets/sounds/Bang.mp3'],
+    })
+  )
+  const handleTriggerPull = () => {
+    howlRef.current?.play()
   }
   return (
-    <div css={styling} onClick={handleClick}>
+    <div css={styling} onClick={handleTriggerPull}>
       Showdown is about to begin.
     </div>
   )
