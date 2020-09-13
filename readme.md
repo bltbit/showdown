@@ -1,4 +1,6 @@
-# Become a Top Programmer in 2021
+# Hello, world.
+
+## Becoming a Top Programmer in 2021
 
 When you finish this course, you will have a ton of marketable skills. You will learn:
 
