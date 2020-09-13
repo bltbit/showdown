@@ -13,7 +13,12 @@ naturalSort.insensitive = true
     const fromBranch = branches[i - 1]
     const toBranch = branches[i]
     await git.checkout(toBranch)
-    console.log(`Merging ${fromBranch} -> ${toBranch}`)
-    await git.mergeFromTo(fromBranch, toBranch)
+    const memo = `Merging ${fromBranch} -> ${toBranch}`
+    console.log(memo)
+    await git.mergeFromTo(fromBranch, toBranch, {
+      '--squash': true,
+      '--no-commit': true,
+    })
+    await git.commit({ '-m': memo })
   }
 })()
