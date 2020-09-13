@@ -1,13 +1,16 @@
 # TOC
 
-- [10 - Boilerplate and Mobile Device Testing](#checkpoint-10)
-- [20 - Firebase Initialization and Deployment](#checkpoint-20)
-- [30 - Your First Pull Request](#checkpoint-30)
-- [40 - Making a Game](#checkpoint-40)
+- [10 - Boilerplate and Mobile Device Testing](#10-boilerplate-and-mobile-device-testing)
+- [20 - Firebase Initialization and Deployment](#20-firebase-initialization-and-deployment)
+- [30 - Your First Pull Request](#30-your-first-pull-request)
+- [40 - Making a Game](#40-making-a-game)
+- [50 - Interactivity: Your First Click Handler](#50-interactivity-your-first-click-handler)
+- [60 - Add gunshot sound](#60-add-gunshot-sound)
+- [70 - Something's Wrong... More mobile device testing](#70-something-s-wrong-more-mobile-device-testing)
 
 ---
 
-# [10 - Boilerplate and Mobile Device Testing](#checkpoint-10)
+# 10 - Boilerplate and Mobile Device Testing
 
 http://github.com/bltbit/showdown/tree/checkpoint-10
 
@@ -72,7 +75,7 @@ Congratulations, you have forked a github project, run a modern responsive Progr
 
 ---
 
-# [20 - Firebase Initialization and Deployment](#checkpoint-20)
+# 20 - Firebase Initialization and Deployment
 
 http://github.com/bltbit/showdown/tree/checkpoint-20
 
@@ -144,7 +147,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-20
 
 ---
 
-# [30 - Your First Pull Request](#checkpoint-30)
+# 30 - Your First Pull Request
 
 http://github.com/bltbit/showdown/tree/checkpoint-30
 
@@ -177,7 +180,7 @@ How awesome are you!! You just legitimately made a contribution to an open sourc
 
 ---
 
-# [40 - Making a Game](#checkpoint-40)
+# 40 - Making a Game
 
 > It's not the notes you play, it's the notes you don't play.
 > _~Miles Davis_
@@ -229,7 +232,7 @@ Starting with a solid foundation is important because it saves time later and re
 
 ---
 
-# [50 - Interactivity: Your First Click Handler](#checkpoint-50)
+# 50 - Interactivity: Your First Click Handler
 
 http://github.com/bltbit/showdown/tree/checkpoint-50
 
@@ -279,7 +282,7 @@ Now you know a critical tool for programming web and hybrid mobile apps - the Ja
 
 ---
 
-# [60 - Add gunshot sound](#checkpoint-50)
+# 60 - Add gunshot sound
 
 http://github.com/bltbit/showdown/tree/checkpoint-60
 
@@ -333,7 +336,7 @@ Do you own a gun or several? Go squeeze off a few rounds this weekend and record
 
 ---
 
-# [70 - Something's Wrong... More mobile device testing](#checkpoint-70)
+# 70 - Something's Wrong... More mobile device testing
 
 http://github.com/bltbit/showdown/tree/checkpoint-70
 
