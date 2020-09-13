@@ -22,7 +22,11 @@ naturalSort.insensitive = true
     await git.checkout(toBranch)
     const memo = `Merging ${fromBranch} -> ${toBranch}`
     console.log(memo)
-    await git.mergeFromTo(fromBranch, toBranch)
+    await git.mergeFromTo(fromBranch, toBranch, {
+      '--squash': true,
+      '--no-commit': true,
+    })
+    await git.commit({ '-m': memo })
     await git.push()
   }
   await git.checkout(branches[branches.length - 2])
