@@ -26,8 +26,14 @@ naturalSort.insensitive = true
       '--squash': true,
       '--no-commit': true,
     })
+    console.log(`Committing "${memo}" to ${toBranch}`)
     await git.commit(memo)
-    await git.push()
   }
-  await git.checkout(branches[branches.length - 2])
+  const branchNames = `origin ${branches.join(' ')}`
+  console.log('Pushing branches ${branchNames}')
+  await git.push(branchNames)
+
+  const finalBranch = branches[branches.length - 2]
+  console.log(`Checking out ${finalBranch}`)
+  await git.checkout(finalBranch)
 })()
