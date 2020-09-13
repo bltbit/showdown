@@ -19,8 +19,8 @@ naturalSort.insensitive = true
     const memo = `Merging ${fromBranch} -> ${toBranch}`
     console.log(memo)
     await git.mergeFromTo(fromBranch, toBranch, {
-      '--squash': true,
       '--no-commit': true,
+      '--no-ff': true,
     })
     console.log(`Committing "${memo}" to ${toBranch}`)
     await git.commit(memo)
