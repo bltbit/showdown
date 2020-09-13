@@ -140,7 +140,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-20
 - Deployment Victory! `https://<project-id>.web.app/home`
 - Commit your changes using VSCode
 - Push your changes using VSCode
-- Compare your branch to the official `checkpoint-20` branch. See any differences? Correct them.
+- Compare your branch to the official `checkpoint-20` branch. See any unintended differences? Correct them.
 
 ---
 
@@ -179,7 +179,8 @@ How awesome are you!! You just legitimately made a contribution to an open sourc
 
 # [40 - Making a Game](#checkpoint-40)
 
-> Music is the silence between the notes.
+> It's not the notes you play, it's the notes you don't play.
+> _~Miles Davis_
 
 ## Objectives
 
@@ -200,6 +201,10 @@ git checkout -b my-checkpoint-40 my-checkpoint-30
 ## Steps
 
 - Why a game? Because it is fun and uses EVERYTHING!
+- What are we making? A quickdraw game
+  - Target practice
+  - Networked
+  - App store
 - We'll take this from a mobile Progressive Web App all the way to the Apple and Google app stores (optional)
 - You'll learn a ton of relevant techniques, gain skills, and experience at the same time. You'll ship something, and that's impressive.
 - `cd pwa`
@@ -215,12 +220,62 @@ git checkout -b my-checkpoint-40 my-checkpoint-30
 - Commit your work to `my-checkpoint-40`
 - Push to your fork
 - Compare using a mock pull request
-- Are there any differences? Fix them now.
+- Are there any unintended differences? Fix them now.
 - Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
 
 ## Review
 
 Starting with a solid foundation is important because it saves time later and reduces frustrating debugging of issues that went unnoticed for too long.
+
+---
+
+# [50 - Interactivity: Your First Click Handler](#checkpoint-50)
+
+http://github.com/bltbit/showdown/tree/checkpoint-50
+
+> Touch has a memory.
+> _~John Keats_
+
+## Objectives
+
+- View the Chrome debugger
+- Observe events and console log them
+- Understand mobile device debugging
+- Understand React `onClick` events
+
+## Tools
+
+- Chrome debugger
+- Safari debugger
+- React
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-50 my-checkpoint-40
+```
+
+## Steps
+
+- Add a click handler
+- Understand event callbacks
+- Open the Chrome debugger
+  - Observe the console logging area
+- Physical device testing
+  - Here's how to do it on iOS https://appletoolbox.com/use-web-inspector-debug-mobile-safari/
+  - You may need to figure out what it is for your phone and devbox
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-50`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+Now you know a critical tool for programming web and hybrid mobile apps - the JavaScript console!
 
 ---
 
@@ -232,11 +287,11 @@ http://github.com/bltbit/showdown/tree/checkpoint-XX
 
 ## Objectives
 
-- Promote your web app URL in **BitBlt's Showdown List**
+-
 
 ## Tools
 
-- tool
+-
 
 ## Create your branch
 
@@ -246,14 +301,16 @@ git checkout -b my-checkpoint-XX my-checkpoint-YY
 
 ## Steps
 
-- step
+-
 
 ## Commit, Push, and Compare
 
 - Commit your work to `my-checkpoint-XX`
 - Push to your fork
 - Compare using a mock pull request
-- Are there any differences? Fix them now.
+- Are there any unintended differences? Fix them now.
 - Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
 
 ## Review
+
+---
