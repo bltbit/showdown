@@ -8,8 +8,8 @@ naturalSort.insensitive = true
   const branches = Object.keys(branchRes.branches)
     .filter((k) => k.startsWith('checkpoint-'))
     .sort(naturalSort)
-  console.log(branches)
   branches.push('master')
+  console.log(branches)
 
   for (let i = 1; i < branches.length; i++) {
     const fromBranch = branches[i - 1]
@@ -24,5 +24,7 @@ naturalSort.insensitive = true
     })
     console.log(`Committing ${fromBranch} -> ${toBranch}`)
     await git.commit(memo)
+    await git.push()
   }
+  await git.checkout(branches[branches.length - 2])
 })()
