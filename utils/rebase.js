@@ -19,6 +19,6 @@ naturalSort.insensitive = true
       '--squash': true,
       '--no-commit': true,
     })
-    await git.commit({ '-m': memo })
+    await git.commit(memo)
   }
 })()
