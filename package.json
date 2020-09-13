@@ -2,8 +2,10 @@
   "name": "showdown",
   "version": "0.0.1",
   "private": true,
+  "repository": "bltbit/showdown",
   "scripts": {
-    "rebase": "node utils/rebase.js"
+    "rechain": "node utils/rechain.js",
+    "faces": "node utils/showdowns.js"
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.1",
