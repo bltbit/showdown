@@ -1,12 +1,13 @@
 # TOC
 
-- [10 - Boilerplate and Mobile Device Testing](#10-boilerplate-and-mobile-device-testing)
-- [20 - Firebase Initialization and Deployment](#20-firebase-initialization-and-deployment)
-- [30 - Your First Pull Request](#30-your-first-pull-request)
-- [40 - Making a Game](#40-making-a-game)
-- [50 - Interactivity: Your First Click Handler](#50-interactivity-your-first-click-handler)
-- [60 - Add gunshot sound](#60-add-gunshot-sound)
-- [70 - Something's Wrong... More mobile device testing](#70-something-s-wrong-more-mobile-device-testing)
+- [10 - Boilerplate and Mobile Device Testing](#10---boilerplate-and-mobile-device-testing)
+- [20 - Firebase Initialization and Deployment](#20---firebase-initialization-and-deployment)
+- [30 - Your First Pull Request](#30---your-first-pull-request)
+- [40 - Making a Game](#40---making-a-game)
+- [50 - Interactivity: Your First Click Handler](#50---interactivity-your-first-click-handler)
+- [60 - Add gunshot sound](#60---add-gunshot-sound)
+- [70 - Something's Wrong... More mobile device testing](#70---somethings-wrong-more-mobile-device-testing)
+- [80 - Counting Bullets](#80---counting-bullets)
 
 ---
 
@@ -375,7 +376,46 @@ You just learned the difference between `onClick` and `onTouchStart`. While `onC
 
 ---
 
-# [XX - Template](#checkpoint-XX)
+# 80 - Counting Bullets
+
+http://github.com/bltbit/showdown/tree/checkpoint-80
+
+> Many of the things you can count, don't count
+> _~Albert Einstein_
+
+## Objectives
+
+- Don't allow unlimited bullets
+- Learn about React hooks
+- Learn about `useState`
+- Learn about `useCallback`
+- Learn about constants
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-80 my-checkpoint-70
+```
+
+## Steps
+
+- Add a `useState` and `useCallback` to manage bullet count; do not let the sound play if the revolver cylinder is empty.
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-80`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+Nice, this is starting to feel more like a revolver. It has 6 shots and then it's empty.
+
+---
+
+# XX - Template
 
 http://github.com/bltbit/showdown/tree/checkpoint-XX
 
