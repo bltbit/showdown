@@ -13,7 +13,14 @@ const styling = css({
 })
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
-  return <div css={styling}>Showdown is about to begin.</div>
+  const handleClick = () => {
+    console.log('Click')
+  }
+  return (
+    <div css={styling} onClick={handleClick}>
+      Showdown is about to begin.
+    </div>
+  )
 }
 
 export default ExploreContainer
