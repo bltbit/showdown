@@ -11,17 +11,17 @@ naturalSort.insensitive = true
   branches.push('master')
   console.log(`Rechaining branches: ${branches.join(' ')}`)
 
-  for (let i = 1; i < branches.length; i++) {
-    const fromBranch = branches[i - 1]
-    const toBranch = branches[i]
-    console.log(`Checking out ${fromBranch} -> ${toBranch}`)
-    await git.checkout(toBranch)
-    const memo = `Merging ${fromBranch} -> ${toBranch}`
-    console.log(memo)
-    await git.mergeFromTo(fromBranch, toBranch)
-    // console.log(`Committing "${memo}" to ${toBranch}`)
-    // await git.commit(memo)
-  }
+  // for (let i = 1; i < branches.length; i++) {
+  //   const fromBranch = branches[i - 1]
+  //   const toBranch = branches[i]
+  //   console.log(`Checking out ${fromBranch} -> ${toBranch}`)
+  //   await git.checkout(toBranch)
+  //   const memo = `Merging ${fromBranch} -> ${toBranch}`
+  //   console.log(memo)
+  //   await git.mergeFromTo(fromBranch, toBranch)
+  // console.log(`Committing "${memo}" to ${toBranch}`)
+  // await git.commit(memo)
+  // }
   const branchNames = branches.join(' ')
   console.log(`Pushing branches ${branchNames}`)
   await git.push('origin', branches)
