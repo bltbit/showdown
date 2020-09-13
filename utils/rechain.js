@@ -26,7 +26,7 @@ naturalSort.insensitive = true
       '--squash': true,
       '--no-commit': true,
     })
-    await git.commit({ '-m': memo })
+    await git.commit(memo)
     await git.push()
   }
   await git.checkout(branches[branches.length - 2])
