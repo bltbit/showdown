@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import { Howl } from 'howler'
-import React, { useCallback, useRef, useState } from 'react'
+import React from 'react'
+import { useRevolver } from '../guns/revolver'
 
 interface ContainerProps {}
 
@@ -13,22 +13,8 @@ const styling = css({
   bottom: 0,
 })
 
-const CYLINDER_CAPACITY = 6
-
 const ExploreContainer: React.FC<ContainerProps> = () => {
-  const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
-  const howlRef = useRef(
-    new Howl({
-      src: ['./assets/sounds/Bang.mp3'],
-    })
-  )
-
-  const handleTriggerPull = useCallback(() => {
-    if (bulletsInCylinder === 0) return
-    setBulletsInCylinder((c) => c - 1)
-    howlRef.current?.play()
-  }, [bulletsInCylinder])
-
+  const { handleTriggerPull } = useRevolver()
   return (
     <div css={styling} onTouchStart={handleTriggerPull}>
       Showdown is about to begin.
