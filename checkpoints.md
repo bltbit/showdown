@@ -279,6 +279,59 @@ Now you know a critical tool for programming web and hybrid mobile apps - the Ja
 
 ---
 
+# [60 - Add gunshot sound](#checkpoint-50)
+
+http://github.com/bltbit/showdown/tree/checkpoint-60
+
+> Suddenly, a shot rang out! A door slammed. The maid screamed.
+> _~Charles M. Schultz_
+
+## Objectives
+
+- Sound a gunshot when the user taps the screen
+
+## Tools
+
+- Freesound
+- Audacity
+- Howler
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-60 my-checkpoint-50
+```
+
+## Steps
+
+- Search for a cool gunshot sound on Freesound. I picked https://freesound.org/people/schots/sounds/382735/
+- Create `assets` folder to store original sounds
+- Make an `attribution.md` file to store attributions
+- Create Audacity project
+- Import gunshot sound
+- Trim/edit sound as needed
+- Export to `pubic/assets/sounds/Bang.mp3`
+- `npm install howler @types/howler`
+- Introduce DefinitelyTyped https://github.com/DefinitelyTyped/DefinitelyTyped
+- Update click handler to play howler sound
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-60`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+Wow! You just learned how to edit sounds like a pro, which basically means you can create your own sounds now. You also learned how to play sounds in response to user actions. You learned where to find free sounds. It's been a pretty good day.
+
+## Bonus Mission
+
+Do you own a gun or several? Go squeeze off a few rounds this weekend and record it. Record other gun sounds too, like various clicks and reloading. Then, upload it to Freesounds and add a section to our `readme.md` under a heading of "Origianl Student Sounds". Send a pull request! If you do this and it's a clean recording, I'll give you 1 year of `idkfa` on [BitBlt Patron](https://www.patreon.com/bltbit).
+
+---
 # [XX - Template](#checkpoint-XX)
 
 http://github.com/bltbit/showdown/tree/checkpoint-XX
