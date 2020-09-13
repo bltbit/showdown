@@ -24,5 +24,6 @@ naturalSort.insensitive = true
     })
     console.log(`Committing ${fromBranch} -> ${toBranch}`)
     await git.commit(memo)
+    await git.push()
   }
 })()
