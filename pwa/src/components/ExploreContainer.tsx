@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import { Howl } from 'howler'
-import React, { useRef } from 'react'
+import React from 'react'
+import { useRevolver } from '../guns/revolver'
 
 interface ContainerProps {}
 
@@ -14,14 +14,7 @@ const styling = css({
 })
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
-  const howlRef = useRef(
-    new Howl({
-      src: ['./assets/sounds/Bang.mp3'],
-    })
-  )
-  const handleTriggerPull = () => {
-    howlRef.current?.play()
-  }
+  const { handleTriggerPull } = useRevolver()
   return (
     <div css={styling} onTouchStart={handleTriggerPull}>
       Showdown is about to begin.

@@ -49,7 +49,10 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "2.4.1"
+    "@capacitor/cli": "2.4.1",
+    "image-data-uri": "^2.0.1",
+    "install": "^0.13.0",
+    "npm": "^6.14.8"
   },
   "description": "Showdown"
 }

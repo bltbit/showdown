@@ -42,7 +42,8 @@ Do all your work on an `APFS Volume`. Use Disk Utility to create one. This is re
 ### Apps
 
 - iTerm 2 (Free)
-- Pixelmator (\$\$ Gimp replacement)
+- Gimp -> Pixelmator (\$\$)
+- Audacity -> Reaper (\$\$)
 
 ### CLI Tools
 
