@@ -13,7 +13,7 @@ naturalSort.insensitive = true
     const fromBranch = branches[i - 1]
     const toBranch = branches[i]
     await git.checkout(toBranch)
-    console.log(`Rebasing ${fromBranch} -> ${toBranch}`)
-    const res = await git.rebase([fromBranch])
+    console.log(`Merging ${fromBranch} -> ${toBranch}`)
+    await git.mergeFromTo(fromBranch, toBranch)
   }
 })()
