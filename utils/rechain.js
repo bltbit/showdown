@@ -18,12 +18,9 @@ naturalSort.insensitive = true
     await git.checkout(toBranch)
     const memo = `Merging ${fromBranch} -> ${toBranch}`
     console.log(memo)
-    await git.mergeFromTo(fromBranch, toBranch, {
-      '--no-commit': true,
-      '--no-ff': true,
-    })
-    console.log(`Committing "${memo}" to ${toBranch}`)
-    await git.commit(memo)
+    await git.mergeFromTo(fromBranch, toBranch)
+    // console.log(`Committing "${memo}" to ${toBranch}`)
+    // await git.commit(memo)
   }
   const branchNames = branches.join(' ')
   console.log(`Pushing branches ${branchNames}`)
