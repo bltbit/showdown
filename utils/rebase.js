@@ -8,6 +8,7 @@ naturalSort.insensitive = true
   const branches = Object.keys(branchRes.branches)
     .filter((k) => k.startsWith('checkpoint-'))
     .sort(naturalSort)
+  branches.push('master')
 
   for (let i = 1; i < branches.length; i++) {
     const fromBranch = branches[i - 1]
