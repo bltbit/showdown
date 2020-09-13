@@ -11,6 +11,10 @@ naturalSort.insensitive = true
   branches.push('master')
   console.log(branches)
 
+  await git.checkout(branches[0])
+  console.log(`Pushing ${branches[0]}`)
+  await git.push()
+
   for (let i = 1; i < branches.length; i++) {
     const fromBranch = branches[i - 1]
     const toBranch = branches[i]
