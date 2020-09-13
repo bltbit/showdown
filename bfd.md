@@ -17,6 +17,7 @@ BFD is a list of tools that you will need to complete this course. You can compl
 
 ## VSCode Essential Plugins
 
+- EditorConfig https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
 - Prettier https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 - GitLens https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
 - Git History https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory
