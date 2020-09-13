@@ -1,0 +1,7 @@
+{
+  "name": "showdown",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
