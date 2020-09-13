@@ -1,12 +1,12 @@
-# Hello, world.
+# BitBlt's Guide to Becoming a Programmer in 2021
 
 This repo teaches you to becom a top programmer in 2021.
 
-# Get Started Right Now
+## Quickstart
 
-Jump straight to [the lessons]('/bltbit/showdown/blob/checkpoint-10/checkpoints.md#checkpoint-10).
+Jump straight to [the checkpoints]('/bltbit/showdown/blob/checkpoint-10/checkpoints.md#checkpoint-10).
 
-# What You'll Learn
+## What you'll learn from this course
 
 When you finish this course, you will have a ton of marketable skills. You will learn:
 
@@ -43,5 +43,3 @@ When you finish this course, you will have a ton of marketable skills. You will 
 - How to write a compelling profile
 
 ### [Contributing](/bltbit/showdown/blob/checkpoint-10/contributing.md)
-
-### [Beginner's First Devbox (BFD)](/bltbit/showdown/blob/checkpoint-10/bfd.md)
