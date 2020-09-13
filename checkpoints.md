@@ -2,8 +2,11 @@
 
 http://github.com/bltbit/showdown/tree/checkpoint-10
 
+> Never stop forking around.
+
 ## Objectives:
 
+- Set up your BFD
 - Run a modern web app
 - Test your app locally and on mobile devices early and often
 - Fork a github repo
@@ -56,9 +59,10 @@ Congratulations, you have forked a github project, run a modern responsive Progr
 
 http://github.com/bltbit/showdown/tree/checkpoint-20
 
+> Deploy early, deploy often.
+
 ## Objectives:
 
-- Deploy early, deploy often
 - Create a Firebase project
 - Deploy to Firebase
 

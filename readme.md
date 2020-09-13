@@ -35,3 +35,9 @@ When you finish this course, you will have a ton of marketable skills. You will 
 - Where to find jobs
 - How to build your resume
 - How to write a compelling profile
+
+### [Checkpoints](https://github.com/bltbit/showdown/blob/checkpoint-10/checkpoints.md)
+
+### [Contributing](https://github.com/bltbit/showdown/blob/checkpoint-10/contributing.md)
+
+### [Beginner's First Devbox (BFD)](https://github.com/bltbit/showdown/blob/checkpoint-10/bfd.md)
