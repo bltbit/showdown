@@ -29,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "rebase": "node utils/rebase.js",
+    "rechain": "node utils/rechain.js",
     "faces": "node utils/showdowns.js"
   },
   "eslintConfig": {
