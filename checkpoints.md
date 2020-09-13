@@ -103,6 +103,16 @@ http://github.com/bltbit/showdown/tree/checkpoint-20
     - Enable `Functions`, `Firestore`, and `Hosting` emulators
     - Accept all following defaults
     - `Y` to download emulators
+- Templatize Firebase config
+  - Copy `.firebaserc` to `.firebaserc.example`
+  - Add `.firebaserc` to `.gitignore`
+- Add Node v8 to `functions`
+  - `cd functions`
+  - `echo 8.15.0 > .nvmrc`
+  - `nvm use`
+  - `npm i`
+  - `cd ..`
+  - `nvm use`
 - Deploy to Firebase
   - `cd pwa`
   - `npm run build`
