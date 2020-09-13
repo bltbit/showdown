@@ -1,10 +1,19 @@
-# [Checkpoint 10 - Boilerplate and Physical Device Testing](#checkpoint-10)
+# TOC
+
+- [10 - Boilerplate and Physical Device Testing](#checkpoint-10)
+- [20 - Firebase Initialization and Deployment](#checkpoint-20)
+- [30 - Your First Pull Request](#checkpoint-30)
+- [40 - Making a Game](#checkpoint-40)
+
+---
+
+# [10 - Boilerplate and Physical Device Testing](#checkpoint-10)
 
 http://github.com/bltbit/showdown/tree/checkpoint-10
 
 > Never stop forking around.
 
-## Objectives:
+## Objectives
 
 - Set up your [BFD](bfd.md)
 - Run a modern web app
@@ -14,7 +23,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-10
 - Use a command line interface
 - Create a local git branch and pus it to your fork
 
-## Tools introduced:
+## Tools
 
 - git
 - VSCode
@@ -22,7 +31,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-10
 - nvm
 - command line interface (terminal)
 
-## Steps:
+## Steps
 
 - How this course is structured - philosophy of small iterations
 - Introduce the BFD
@@ -57,27 +66,29 @@ http://github.com/bltbit/showdown/tree/checkpoint-10
 - Push your `my-checkpoint-10` branch to your github fork
   - `git push`
 
+## Review
+
 Congratulations, you have forked a github project, run a modern responsive Progressive Web Application, and performed physical device testing. Go eat a Jolly Rancher, you've earned it. If you're a [BitBlt Patreon supporter](https://www.patreon.com/bltbit) at any level, DM me your physical address on Patreon and and I will mail you one Jolly Rancher in the flavor of your choice of whatever I have, including rare ones. I know you might think green apple is the best flavor. But if you choose grape your cherry, I will know how serious you are about learning to program.
 
 ---
 
-# [Checkpoint 20 - Firebase Initialization and Deployment](#checkpoint-20)
+# [20 - Firebase Initialization and Deployment](#checkpoint-20)
 
 http://github.com/bltbit/showdown/tree/checkpoint-20
 
 > Deploy early, deploy often.
 
-## Objectives:
+## Objectives
 
 - Create a Firebase project
 - Deploy to Firebase
 
-## Tools introduced:
+##Tools and Concepts
 
 - Firebase account
 - Firebase Tools CLI
 
-## Steps:
+## Steps
 
 - `git checkout -b my-checkpoint-20 my-checkpoint-10`
 - Move app into `pwa` subfolder
@@ -133,21 +144,21 @@ http://github.com/bltbit/showdown/tree/checkpoint-20
 
 ---
 
-# Checkpoint 30 - Your First Pull Request
+# [30 - Your First Pull Request](#checkpoint-30)
 
 http://github.com/bltbit/showdown/tree/checkpoint-30
 
 > Only those who have learned the power of sincere and selfless contribution experience life's deepest joy: true fulfillment.
 
-## Objectives:
+## Objectives
 
 - Promote your web app URL in **BitBlt's Showdown List**
 
-## Tools introduced:
+## Tools
 
 - Github pull request feature
 
-## Steps:
+## Steps
 
 - `git checkout -b my-checkpoint-30 checkpoint-30`
 - Add your github username and Firebase URL to the bottom of `showdowns.json`
@@ -160,4 +171,89 @@ http://github.com/bltbit/showdown/tree/checkpoint-30
 - Go to your github repo URL and you will see a `Create Pull Request` button. Press it.
   - For the base branch, choose `master`
 
+## Review
+
 How awesome are you!! You just legitimately made a contribution to an open source project. Put that on your resume. Seriously, you just forked a repo, made a change, and sent a pull request. That's a huge flex!
+
+---
+
+# [40 - Making a Game](#checkpoint-40)
+
+> Music is the silence between the notes.
+
+## Objectives
+
+- Establish a blank canvas
+- Prevent device-specific quirks up front
+
+## Tools
+
+- Emotion
+- CSS
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-40 my-checkpoint-30
+```
+
+## Steps
+
+- Why a game? Because it is fun and uses EVERYTHING!
+- We'll take this from a mobile Progressive Web App all the way to the Apple and Google app stores (optional)
+- You'll learn a ton of relevant techniques, gain skills, and experience at the same time. You'll ship something, and that's impressive.
+- `cd pwa`
+- Set up an `ngrok` shortcut to make it easy. We're going ot be doing a lot of physical device testing.
+  - If you want to pay for ngrok, you can choose your own subdomain. I don't think you need it. Just copy the URL into your shared phone notes.
+- Why is physical device testing so important, so early? Check it out, there's already a problem.
+  - On Mobile Safari (iOS), there is a behavior called `overscroll` where the view bounces a bit when you swipe. That might be okay for a web page, but we don't want our app or mobile game to feel that way.
+  - Disable overscroll
+- Create a blank canvas
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-40`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+Starting with a solid foundation is important because it saves time later and reduces frustrating debugging of issues that went unnoticed for too long.
+
+---
+
+# [XX - Template](#checkpoint-XX)
+
+http://github.com/bltbit/showdown/tree/checkpoint-XX
+
+> Quote
+
+## Objectives
+
+- Promote your web app URL in **BitBlt's Showdown List**
+
+## Tools
+
+- tool
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-XX my-checkpoint-YY
+```
+
+## Steps
+
+- step
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-XX`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
