@@ -133,7 +133,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-30
 
 ## Objectives:
 
-- Advertise your web app URL in **BitBlt's Showdown List**
+- Promote your web app URL in **BitBlt's Showdown List**
 
 ## Tools introduced:
 
@@ -144,9 +144,10 @@ http://github.com/bltbit/showdown/tree/checkpoint-30
 - `git checkout -b my-checkpoint-30 checkpoint-30`
 - Add your github username and Firebase URL to the bottom of `showdowns.json`
   - Since your project is not live yet, set `isLive` to `false`
-  - Set a `logoUrl`. `<yourUrl>/assets/icon/favicon.png` is a good option. If you omit this, we will use your github avatar.
+  - Set `githubUsername` to your gthub username
+  - Set a `logoUrl`. `<yourFirebaseUrl>/assets/icon/favicon.png` is a good option. If you omit this, we will use your github avatar.
   - Set a `title` to whatever you named your game. I named mine `Showdown`.
-  - **[Optional]** If you are a [BitBlt Patron](https://www.patreon.com/bltbit) of `idkfa` or better, your project is eligible to be Featured in both the Featured section and in newsletters and live streams. If you are into that and you want it to happen when you go live, set `isFeatured` to `true`. This will only work as long as you are a current Patron.
+  - **[Optional]** Set `patreonUsername` if you are a [BitBlt Patron](https://www.patreon.com/bltbit). Your game will get additional promotion in this repo and on BitBlt channels after you set `isLive` to `true`.
 - Commit and push your changes
 - Go to your github repo URL and you will see a `Create Pull Request` button. Press it.
   - For the base branch, choose `master`
