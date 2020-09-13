@@ -113,29 +113,26 @@ contributors.html = function (dir, opts) {
 contributors.update = function (dir, opts) {
   return core(dir, opts).then(html).then(update).then(end('filename'))
 }
+
+const findShowdown = (c) => {
+  const { login } = c
+  return showdowns.find((s) => s.githubUsername === login)
+}
+const linkTo = (c) => findShowdown(c).url
+const imageTitle = (c) => `${findShowdown(c).title || 'Untitled'} by ${c.login}`
+const avatarUrl = (c) => findShowdown(c).logoUrl || c.avatar_url
+
 ;(async () => {
-  await contributors.update('.', { size: 20 })
+  await contributors.update('.', { size: 30 })
   await contributors.update('.', {
     size: 40,
     prefix: 'alumni',
-    linkTo: (c) => {
-      const { login } = c
-      return showdowns.find((s) => s.githubUsername === login).url
-    },
-    avatarUrl: (c) => {
-      const { login } = c
-      return (
-        showdowns.find((s) => s.githubUsername === login).logoUrl ||
-        c.avatar_url
-      )
-    },
-    imageTitle: (c) => {
-      const { login } = c
-      return showdowns.find((s) => s.githubUsername === login).title || c.login
-    },
+    linkTo,
+    avatarUrl,
+    imageTitle,
     filter: (contributors) =>
       contributors.filter((c) => {
-        const u = showdowns.find((s) => s.githubUsername === c.login)
+        const u = findShowdown(c)
         return u && u.isLive && !u.patreonUsername
       }),
   })
@@ -143,24 +140,12 @@ contributors.update = function (dir, opts) {
   await contributors.update('.', {
     size: 80,
     prefix: 'featured-alumni',
-    linkTo: (c) => {
-      const { login } = c
-      return showdowns.find((s) => s.githubUsername === login).url
-    },
-    avatarUrl: (c) => {
-      const { login } = c
-      return (
-        showdowns.find((s) => s.githubUsername === login).logoUrl ||
-        c.avatar_url
-      )
-    },
-    imageTitle: (c) => {
-      const { login } = c
-      return showdowns.find((s) => s.githubUsername === login).title || c.login
-    },
+    linkTo,
+    avatarUrl,
+    imageTitle,
     filter: (contributors) =>
       contributors.filter((c) => {
-        const u = showdowns.find((s) => s.githubUsername === c.login)
+        const u = findShowdown(c)
         return u && u.isLive && !!u.patreonUsername
       }),
   })
@@ -168,24 +153,12 @@ contributors.update = function (dir, opts) {
   await contributors.update('.', {
     size: 40,
     prefix: 'wip',
-    linkTo: (c) => {
-      const { login } = c
-      return showdowns.find((s) => s.githubUsername === login).url
-    },
-    avatarUrl: (c) => {
-      const { login } = c
-      return (
-        showdowns.find((s) => s.githubUsername === login).logoUrl ||
-        c.avatar_url
-      )
-    },
-    imageTitle: (c) => {
-      const { login } = c
-      return showdowns.find((s) => s.githubUsername === login).title || c.login
-    },
+    linkTo,
+    avatarUrl,
+    imageTitle,
     filter: (contributors) =>
       contributors.filter((c) => {
-        const u = showdowns.find((s) => s.githubUsername === c.login)
+        const u = findShowdown(c)
         return !u || !u.isLive
       }),
   })
