@@ -1,4 +1,4 @@
-# Checkpoint 10 - Boilerplate and Physical Device Testing
+# [Checkpoint 10 - Boilerplate and Physical Device Testing](#checkpoint-10)
 
 http://github.com/bltbit/showdown/tree/checkpoint-10
 
@@ -55,7 +55,7 @@ Congratulations, you have forked a github project, run a modern responsive Progr
 
 ---
 
-# Checkpoint 20 - Firebase Initialization and Deployment
+# [Checkpoint 20 - Firebase Initialization and Deployment](#checkpoint-20)
 
 http://github.com/bltbit/showdown/tree/checkpoint-20
 
