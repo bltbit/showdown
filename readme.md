@@ -4,7 +4,7 @@ This repo teaches you to becom a top programmer in 2021.
 
 ## Quickstart
 
-Jump straight to [the checkpoints]('/bltbit/showdown/blob/checkpoint-10/checkpoints.md#checkpoint-10).
+Jump straight to [the checkpoints]('http://github.com/bltbit/showdown/blob/checkpoint-10/checkpoints.md#checkpoint-10).
 
 ## What you'll learn from this course
 
