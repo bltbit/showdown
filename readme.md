@@ -42,4 +42,4 @@ When you finish this course, you will have a ton of marketable skills. You will 
 - How to build your resume
 - How to write a compelling profile
 
-### [Contributing](/bltbit/showdown/blob/checkpoint-10/contributing.md)
+### [Contributing](contributing.md)

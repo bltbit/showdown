@@ -6,7 +6,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-10
 
 ## Objectives:
 
-- Set up your BFD
+- Set up your [BFD](bfd.md)
 - Run a modern web app
 - Test your app locally and on mobile devices early and often
 - Fork a github repo
