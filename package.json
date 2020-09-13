@@ -2,6 +2,7 @@
   "name": "showdown",
   "version": "0.0.1",
   "private": true,
+  "repository": "bltbit/showdown",
   "dependencies": {
     "@capacitor/core": "2.4.1",
     "@ionic/react": "^5.0.7",
@@ -28,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "rebase": "node utils/rebase.js"
+    "rebase": "node utils/rebase.js",
+    "faces": "node utils/showdowns.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,10 +49,15 @@
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.1",
+    "gh-got": "^9.0.0",
     "javascript-natural-sort": "^0.7.1",
+    "micromatch": "^4.0.2",
     "prettier": "^2.1.1",
     "prettier-plugin-organize-imports": "^1.1.1",
-    "simple-git": "^2.20.1"
+    "readme-filename": "^1.0.0",
+    "replace-in-file": "^6.1.0",
+    "simple-git": "^2.20.1",
+    "typescript": "3.8.3"
   },
   "description": "An Ionic project"
 }
