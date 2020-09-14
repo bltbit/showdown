@@ -636,8 +636,6 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 
 ## Steps
 
-### Part 1: Red box with cylinder image
-
 - Search https://www.pngguru.com/search?png=chamber+revolver for suitable images
 - I really love https://www.pngguru.com/free-transparent-background-png-clipart-epbjj
 - Open with Gimp
@@ -660,35 +658,6 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
     - convert to `index.tsx`
     - add css styling to size and contain it
 
-### Part 2: Cylinder alignment and spent shot markers
-
-- This intermediate step is in github branch `checkpoint-120-part-2`
-- Implement spent shots
-- Understand `transform: rotate(30deg);` CSS prop
-- Apply to cylinder image
-
-### Part 3: Cylinder rotation animation when shooting
-
-- This intermediate step is in github branch `checkpoint-120-part-3`
-- Thinking about how the revolver works
-  - Hammer cocks back
-  - Cylinder rotates next round into place
-  - Pull trigger to shoot
-  - Repeatt to prepare for next round
-  - This means we need sounds and motion _after_ the bang
-- Rotating after
-  - Quick math: 6 shots, 360 derees = 60 degrees per shot
-    - Let's see if that's right
-  - Figure out starting angle and refactor
-  - Move to `checkpoint-120-part-3-b`
-  - Increment/reset degree adjustment on every shot
-    - Noticing slightly weird rotation
-    - Adjust containing `<div>` width and height to `100%`
-
-### Part 3: Animate spen shots
-
-- Play with color and opacity
-
 ## Commit, Push, and Compare
 
 - Commit your work to `my-checkpoint-110`
@@ -698,6 +667,8 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 - Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
 
 ## Review
+
+This is a good example of an intermediate step, or a proof of concept step. Sometimes called a "spike", we roughed out how we might want the snack tray and revolver cylinder to look.
 
 ---
 
