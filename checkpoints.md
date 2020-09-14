@@ -668,6 +668,8 @@ git checkout -b my-checkpoint-120 my-checkpoint-110
 
 ## Review
 
+This is a good example of an intermediate step, or a proof of concept step. Sometimes called a "spike", we roughed out how we might want the snack tray and revolver cylinder to look.
+
 ---
 
 # XX - Template
