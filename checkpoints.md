@@ -607,6 +607,65 @@ If you thought this step was easy, you might be in slim company. The real subtlt
 
 ---
 
+# 110 - Adding Visuals: Revolver Cylinder
+
+http://github.com/bltbit/showdown/tree/checkpoint-110
+
+> God made all men, but Samuel Colt made all men equal.  
+> _~Cherie Priest_
+
+## Objectives
+
+- Add a "snack tray" showing how many bullets we have
+- Learn a little more CSS kung fu
+- Learn a littme more about what the Chrome debugger can do for you
+- Learn to design visual game assets using Gimp
+- Learn to find open source visual game assets
+- Learn how to create sub components in React
+
+## Tools
+
+- Gimp
+- imagemin
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-110 my-checkpoint-100
+```
+
+## Steps
+
+## Part 1: Red box with cylinder image
+
+- Search https://www.pngguru.com/search?png=chamber+revolver for suitable images
+- I really love https://www.pngguru.com/free-transparent-background-png-clipart-epbjj
+- Open with Gimp
+- Resize to 100x100
+- Verify canvas size is square (it is)
+- Export
+- Create `package.json` script for `imagemin`
+- Update the base64 encoder to save both audio and image data in base64 format
+- Create a `<div>` block with red background styling to be the snack tray
+  - use `position:absolute` and `top`, `bottom`, `left`, `right`, `width`, `height` to position the tray where you want it
+  - add a nice rounded border using `border-radius` and `border-color` attributes
+  - add the revolver image we generated
+    - this will need to be a component that comes from `useRevolver`
+    - convert to `index.tsx`
+    - add css styling to size and contain it
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-110`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+---
+
 # XX - Template
 
 http://github.com/bltbit/showdown/tree/checkpoint-XX

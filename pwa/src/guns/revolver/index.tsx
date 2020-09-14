@@ -1,6 +1,7 @@
 import { Howl } from 'howler'
-import { useCallback, useRef, useState } from 'react'
-import audioConfig from './build/audio.json'
+import React, { useCallback, useRef, useState } from 'react'
+import audioConfig from './build/audiob64.json'
+import imageConfig from './build/imageb64.json'
 import { SpriteNames } from './build/SpriteNames'
 
 const CYLINDER_CAPACITY = 6
@@ -28,5 +29,7 @@ export const useRevolver = () => {
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder])
 
-  return { handleTriggerPull }
+  const Image = () => <img src={imageConfig.cylinder} />
+
+  return { handleTriggerPull, Image }
 }
