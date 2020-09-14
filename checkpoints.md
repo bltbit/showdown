@@ -641,6 +641,12 @@ git checkout -b my-checkpoint-120 my-checkpoint-110
 - Open with Gimp
 - Resize to 100x100
 - Verify canvas size is square (it is)
+- Demonstrate arbitrary angle transform in Gimp to show that the cylinder rotates cleanly
+  - Notice how light rotates with the cylinder. To solve this, we would need:
+    - Original image as layers
+    - Without light source
+    - Add a quasi-light source using CSS
+    - Too hard for this step, let's just go with what we have. Maybe it'll look cool anyway.
 - Export
 - Create `package.json` script for `imagemin`
 - Update the base64 encoder to save both audio and image data in base64 format
