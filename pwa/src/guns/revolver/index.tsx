@@ -29,7 +29,7 @@ export const useRevolver = () => {
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder])
 
-  const Image = () => <img src={imageConfig.cylinder} />
+  const Image = () => <img src={imageConfig.cylinder} alt="" />
 
   return { handleTriggerPull, Image }
 }
