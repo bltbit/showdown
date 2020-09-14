@@ -93,7 +93,6 @@ export const useRevolver = () => {
     }
 
     setBulletsInCylinder((c) => c - 1)
-
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder])
 
