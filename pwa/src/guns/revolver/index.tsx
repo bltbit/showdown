@@ -11,7 +11,13 @@ const GUN_ACTION_DELAY = 100
 
 const styling = css`
   .cylinder {
+    width: 100%;
+    height: 100%;
     position: absolute;
+    img {
+      width: 100%;
+      height: 100%;
+    }
     .bullets {
       position: absolute;
       top: 0px;
@@ -55,11 +61,13 @@ const styling = css`
 `
 
 const STARTING_ANGLE = 33
+const SHOT_ROTATION_ANGLE = 60
 
 const foo = React // so organize imports doesn't remove it
 
 export const useRevolver = () => {
   const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
+  const [rotationoffset, setRotationOffset] = useState(0)
   const gunStatusRef = useRef({ isBusy: false })
 
   const howlRef = useRef(new Howl(audioConfig))
@@ -77,6 +85,7 @@ export const useRevolver = () => {
     }
 
     setBulletsInCylinder((c) => c - 1)
+    setRotationOffset((o) => o + SHOT_ROTATION_ANGLE)
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder])
 
@@ -84,7 +93,7 @@ export const useRevolver = () => {
     <div css={styling}>
       <div
         className="cylinder"
-        style={{ transform: `rotate(${STARTING_ANGLE}deg)` }}
+        style={{ transform: `rotate(${STARTING_ANGLE + rotationoffset}deg)` }}
       >
         <img src={imageConfig.cylinder} />
         <div className="bullets">

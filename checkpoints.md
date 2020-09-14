@@ -643,6 +643,12 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 - Open with Gimp
 - Resize to 100x100
 - Verify canvas size is square (it is)
+- Demonstrate arbitrary angle transform in Gimp to show that the cylinder rotates cleanly
+  - Notice how light rotates with the cylinder. To solve this, we would need:
+    - Original image as layers
+    - Without light source
+    - Add a quasi-light source using CSS
+    - Too hard for this step, let's just go with what we have. Maybe it'll look cool anyway.
 - Export
 - Create `package.json` script for `imagemin`
 - Update the base64 encoder to save both audio and image data in base64 format
@@ -663,6 +669,7 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 
 ### Part 3: Cylinder rotation animation when shooting
 
+- This intermediate step is in github branch `checkpoint-120-part-3`
 - Thinking about how the revolver works
   - Hammer cocks back
   - Cylinder rotates next round into place
@@ -673,6 +680,10 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
   - Quick math: 6 shots, 360 derees = 60 degrees per shot
     - Let's see if that's right
   - Figure out starting angle and refactor
+  - Move to `checkpoint-120-part-3-b`
+  - Increment/reset degree adjustment on every shot
+    - Noticing slightly weird rotation
+    - Adjust containing `<div>` width and height to `100%`
 
 ### Part 3: Animate spen shots
 
@@ -718,7 +729,7 @@ git checkout -b my-checkpoint-XX my-checkpoint-YY
 
 - Commit your work to `my-checkpoint-XX`
 - Push to your fork
-- Compare using a mock pull request
+- Compare to the official `checkpoint-XX` using a mock pull request
 - Are there any unintended differences? Fix them now.
 - Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
 
