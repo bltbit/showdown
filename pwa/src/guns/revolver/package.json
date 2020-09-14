@@ -1,0 +1,20 @@
+{
+  "name": "revolver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "audio:generate": "npm run audio:generate:sprites && npm run audio:generate:typings",
+    "audio:generate:sprites": "audiosprite --format howler2 -g 1 --output build/audio ./sounds/export/*.wav && node b64encode.js",
+    "audio:generate:typings": "node genAudioSpriteTypes.js > build/SpriteNames.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "audiosprite": "^0.7.2",
+    "image-data-uri": "^2.0.1"
+  },
+  "devDependencies": {
+    "patch-package": "^6.2.2"
+  }
+}

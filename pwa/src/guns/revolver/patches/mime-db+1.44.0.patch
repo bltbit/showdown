@@ -1,0 +1,14 @@
+diff --git a/node_modules/mime-db/db.json b/node_modules/mime-db/db.json
+index e69f352..0bfee8e 100644
+--- a/node_modules/mime-db/db.json
++++ b/node_modules/mime-db/db.json
+@@ -6127,7 +6127,8 @@
+     "source": "iana"
+   },
+   "audio/ac3": {
+-    "source": "iana"
++    "source": "iana",
++    "extensions": ["ac3"]
+   },
+   "audio/adpcm": {
+     "source": "apache",

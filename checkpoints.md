@@ -8,6 +8,8 @@
 - [60 - Add gunshot sound](#60---add-gunshot-sound)
 - [70 - Something's Wrong... More mobile device testing](#70---somethings-wrong-more-mobile-device-testing)
 - [80 - Counting Bullets](#80---counting-bullets)
+- [90 - Encapsulation](#90---encapsulation)
+- [100 - Empty Click Sound](#100---empty-click-sound)
 
 ---
 
@@ -479,6 +481,80 @@ data:audio/mpeg;base64,SUQzAwAAAAAAFFRYWFgAAAAKAAAAU29mdHdhcmUA//uUZAAAAAAAAAAAA
 ## Review
 
 You're on fire! You did your first refactoring. Skillful refactoring is the hallmark of a good programmer. You learned how to encapsulate both code and assets in a way that they can be included in your application while still remaining self-contained. Refactoring is tough to get right, so it's important to start with working code and change it in very small steps while verifying at each step that nothing was lost.
+
+---
+
+# 100 - Empty Click Sound
+
+http://github.com/bltbit/showdown/tree/checkpoint-100
+
+> An empty gun can tell a man a lot of things.
+> _~Paladin; Have Gun - Will Travel_
+
+## Objectives
+
+- Create an empty click sound
+- Create an audio sprite
+- Create Typescript typings
+- Create utility scripts to generate audio sprites and base64 data encodings
+- Create subpakcages by using nested `package.json` to help automate scripting tasks
+- Patch misbehaving `npm` packages
+
+## Tools
+
+- audiosprite
+- patch-package
+- image-data-uri
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-100 my-checkpoint-90
+```
+
+## Steps
+
+- Find an empty clicking sound on Freesound. I used this one. https://freesound.org/s/154934/
+- Massage it in Audacity
+- Use the `Export > Multiple` from Audacity to export multiple `WAV` files
+- Introducing audio sprites
+  - What is an audio sprite?
+  - We will use `audiosprite` to create a Howler-compatible audio sprite
+- Automate all your asset generation
+  - `cd pwa/guns/revolver`
+  - `npm init` inside the `revolver/` folder
+    - accept all defaults
+  - `npm i -D audiosprite image-data-uri`
+  - build a script to map the `build/audio.json` `src` paths to base64 URLs
+  - `ac3` is not recognized by `mime-types`
+    - Introducing `patch-package`
+    - `npm i -g patch-package`
+    - patch `mime-db`
+  - Create utility to generate Typescript mappings for the sprite names
+  - finalize `package.json` scripts
+- Swap out current Howler config for `./build/audio.json`
+  - Problem: typescript error!
+  - Modify `@types/howler`
+    - Howler is used by the `pwa/package.json`, we must modify at that level
+    - `cd ../..`
+    - `patch-package @types/howler`
+- Add logic for empty click
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-100`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+This was a monster of a lesson. It's a good thing we refactored so we had a nice nest to build in, right! Nothing can stop you now. You know how to write utility scripts, and not even rogue `npm` packages will keep you from succeeding.
+
+You successfully created audio sprites and embedded them in your code, thus maintaining encapsulation principles. This isn't strictly necessary, but it's good to know how to do this because sometimes it really does make things a lot cleaner and separates concerns. It's amazing how doing the `Bang` sound was somewhat straightforward; but as soon as you want to repeat the effort, you realize it won't scale. Sometimes the 2nd or 3rd effort leads to refactoring and automation that seems overly complex is actually an investment in your future.
+
+**[Bonus]** You patched two packages, and because you already know how to fork, clone, and create pull requests, you could even send a PR back to those package authors if you wanted to be a super good citizen. In fact, the first person to do this will receive an `iddqd` level [BitBlt Patreon](https://www.patreon.com/bltbit) status for 1 year.
 
 ---
 
