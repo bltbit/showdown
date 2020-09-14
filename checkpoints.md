@@ -637,8 +637,6 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 
 ## Steps
 
-### Part 1: Red box with cylinder image
-
 - Search https://www.pngguru.com/search?png=chamber+revolver for suitable images
 - I really love https://www.pngguru.com/free-transparent-background-png-clipart-epbjj
 - Open with Gimp
@@ -660,6 +658,20 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
     - this will need to be a component that comes from `useRevolver`
     - convert to `index.tsx`
     - add css styling to size and contain it
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-110`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+This is a good example of an intermediate step, or a proof of concept step. Sometimes called a "spike", we roughed out how we might want the snack tray and revolver cylinder to look.
+
+---
 
 ### Part 2: Cylinder alignment and spent shot markers
 
@@ -692,18 +704,6 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 ### Part 3: Animate spen shots
 
 - Play with color and opacity
-
-## Commit, Push, and Compare
-
-- Commit your work to `my-checkpoint-110`
-- Push to your fork
-- Compare using a mock pull request
-- Are there any unintended differences? Fix them now.
-- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
-
-## Review
-
----
 
 # XX - Template
 
