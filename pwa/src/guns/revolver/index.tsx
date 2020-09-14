@@ -79,13 +79,14 @@ export const useRevolver = () => {
       gunStatusRef.current.isBusy = false
     }, GUN_ACTION_DELAY)
 
+    setRotationOffset((o) => o + SHOT_ROTATION_ANGLE)
+
     if (bulletsInCylinder === 0) {
       howlRef.current?.play(SpriteNames.Empty)
       return
     }
 
     setBulletsInCylinder((c) => c - 1)
-    setRotationOffset((o) => o + SHOT_ROTATION_ANGLE)
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder])
 
