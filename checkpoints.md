@@ -627,6 +627,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-110
 
 - Gimp
 - imagemin
+- react-spring
 
 ## Create your branch
 
@@ -684,6 +685,9 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
   - Increment/reset degree adjustment on every shot
     - Noticing slightly weird rotation
     - Adjust containing `<div>` width and height to `100%`
+  - Move to `checkpoint-120-part-3-c`
+  - The rotation angle works, but it's too choppy.
+    - Use `react-spring` to smooth it out
 
 ### Part 3: Animate spen shots
 

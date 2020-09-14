@@ -2,10 +2,10 @@
 import { css, jsx } from '@emotion/core'
 import { Howl } from 'howler'
 import React, { useCallback, useRef, useState } from 'react'
+import { animated, useSpring } from 'react-spring'
 import audioConfig from './build/audiob64.json'
 import imageConfig from './build/imageb64.json'
 import { SpriteNames } from './build/SpriteNames'
-
 const CYLINDER_CAPACITY = 6
 const GUN_ACTION_DELAY = 100
 
@@ -67,7 +67,11 @@ const foo = React // so organize imports doesn't remove it
 
 export const useRevolver = () => {
   const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
-  const [rotationoffset, setRotationOffset] = useState(0)
+  const [cylinderRotationProps, setCylinderRotationProps] = useSpring(() => ({
+    angle: STARTING_ANGLE,
+    config: { duration: 50 },
+  }))
+
   const gunStatusRef = useRef({ isBusy: false })
 
   const howlRef = useRef(new Howl(audioConfig))
@@ -79,21 +83,29 @@ export const useRevolver = () => {
       gunStatusRef.current.isBusy = false
     }, GUN_ACTION_DELAY)
 
+    setCylinderRotationProps({
+      angle: cylinderRotationProps.angle.getValue() + SHOT_ROTATION_ANGLE,
+    })
+
     if (bulletsInCylinder === 0) {
       howlRef.current?.play(SpriteNames.Empty)
       return
     }
 
     setBulletsInCylinder((c) => c - 1)
-    setRotationOffset((o) => o + SHOT_ROTATION_ANGLE)
+
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder])
 
   const Image = () => (
     <div css={styling}>
-      <div
+      <animated.div
         className="cylinder"
-        style={{ transform: `rotate(${STARTING_ANGLE + rotationoffset}deg)` }}
+        style={{
+          transform: cylinderRotationProps.angle.interpolate(
+            (a) => `rotate(${a}deg)`
+          ),
+        }}
       >
         <img src={imageConfig.cylinder} />
         <div className="bullets">
@@ -110,7 +122,7 @@ export const useRevolver = () => {
               ></div>
             ))}
         </div>
-      </div>
+      </animated.div>
     </div>
   )
 
