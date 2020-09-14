@@ -607,9 +607,9 @@ If you thought this step was easy, you might be in slim company. The real subtlt
 
 ---
 
-# 110 - Adding Visuals: Revolver Cylinder
+# 120 - Adding Visuals: Revolver Cylinder
 
-http://github.com/bltbit/showdown/tree/checkpoint-110
+http://github.com/bltbit/showdown/tree/checkpoint-120
 
 > God made all men, but Samuel Colt made all men equal.  
 > _~Cherie Priest_
@@ -631,12 +631,10 @@ http://github.com/bltbit/showdown/tree/checkpoint-110
 ## Create your branch
 
 ```
-git checkout -b my-checkpoint-110 my-checkpoint-100
+git checkout -b my-checkpoint-120 my-checkpoint-110
 ```
 
 ## Steps
-
-## Part 1: Red box with cylinder image
 
 - Search https://www.pngguru.com/search?png=chamber+revolver for suitable images
 - I really love https://www.pngguru.com/free-transparent-background-png-clipart-epbjj
@@ -656,7 +654,7 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 
 ## Commit, Push, and Compare
 
-- Commit your work to `my-checkpoint-110`
+- Commit your work to `my-checkpoint-120`
 - Push to your fork
 - Compare using a mock pull request
 - Are there any unintended differences? Fix them now.
