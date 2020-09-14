@@ -12,7 +12,6 @@ const GUN_ACTION_DELAY = 100
 const styling = css`
   .cylinder {
     position: absolute;
-    transform: rotate(33deg);
     .bullets {
       position: absolute;
       top: 0px;
@@ -55,6 +54,8 @@ const styling = css`
   }
 `
 
+const STARTING_ANGLE = 33
+
 const foo = React // so organize imports doesn't remove it
 
 export const useRevolver = () => {
@@ -81,13 +82,17 @@ export const useRevolver = () => {
 
   const Image = () => (
     <div css={styling}>
-      <div className="cylinder">
+      <div
+        className="cylinder"
+        style={{ transform: `rotate(${STARTING_ANGLE}deg)` }}
+      >
         <img src={imageConfig.cylinder} />
         <div className="bullets">
           {Array(CYLINDER_CAPACITY)
             .fill(0)
             .map((j, i) => (
               <div
+                key={i}
                 className={`bullet bullet-${i + 1} ${
                   CYLINDER_CAPACITY - bulletsInCylinder > i
                     ? `bullet-spent`
