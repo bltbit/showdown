@@ -239,7 +239,7 @@ Starting with a solid foundation is important because it saves time later and re
 
 http://github.com/bltbit/showdown/tree/checkpoint-50
 
-> Touch has a memory.
+> Touch has a memory.  
 > _~John Keats_
 
 ## Objectives
@@ -289,7 +289,7 @@ Now you know a critical tool for programming web and hybrid mobile apps - the Ja
 
 http://github.com/bltbit/showdown/tree/checkpoint-60
 
-> Suddenly, a shot rang out! A door slammed. The maid screamed.
+> Suddenly, a shot rang out! A door slammed. The maid screamed.  
 > _~Charles M. Schultz_
 
 ## Objectives
@@ -343,7 +343,7 @@ Do you own a gun or several? Go squeeze off a few rounds this weekend and record
 
 http://github.com/bltbit/showdown/tree/checkpoint-70
 
-> Just when I thought I was out, they pull me back in.
+> Just when I thought I was out, they pull me back in.  
 > _~Michael Corleone_
 
 ## Objectives
@@ -382,7 +382,7 @@ You just learned the difference between `onClick` and `onTouchStart`. While `onC
 
 http://github.com/bltbit/showdown/tree/checkpoint-80
 
-> Many of the things you can count, don't count
+> Many of the things you can count, don't count.  
 > _~Albert Einstein_
 
 ## Objectives
@@ -421,7 +421,7 @@ Nice, this is starting to feel more like a revolver. It has 6 shots and then it'
 
 http://github.com/bltbit/showdown/tree/checkpoint-90
 
-> If you can get today’s work done today, but you do it in such a way that you can’t possibly get tomorrow’s work done tomorrow, then you lose.
+> If you can get today’s work done today, but you do it in such a way that you can’t possibly get tomorrow’s work done tomorrow, then you lose.  
 > _~Martin Fowler_
 
 ## Objectives
@@ -488,7 +488,7 @@ You're on fire! You did your first refactoring. Skillful refactoring is the hall
 
 http://github.com/bltbit/showdown/tree/checkpoint-100
 
-> An empty gun can tell a man a lot of things.
+> An empty gun can tell a man a lot of things.  
 > _~Paladin; Have Gun - Will Travel_
 
 ## Objectives
