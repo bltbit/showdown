@@ -658,20 +658,47 @@ git checkout -b my-checkpoint-120 my-checkpoint-110
     - convert to `index.tsx`
     - add css styling to size and contain it
 
-### Part 2: Cylinder rotation and spent shot markers
+## Commit, Push, and Compare
 
-- This intermediate step is in github branch `checkpoint-120-part-2`
+- Commit your work to `my-checkpoint-120`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+---
+
+# 130 - Spent Shots
+
+http://github.com/bltbit/showdown/tree/checkpoint-130
+
+> Quote
+
+## Objectives
+
+- Do something when bullets have been used
+
+## Tools
+
+-
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-130 my-checkpoint-120
+```
+
+## Steps
+
 - Implement spent shots
 - Understand `transform: rotate(30deg);` CSS prop
 - Apply to cylinder image
 
-### Part 3: Animate spen shots
-
-- Play with color and opacity
-
 ## Commit, Push, and Compare
 
-- Commit your work to `my-checkpoint-120`
+- Commit your work to `my-checkpoint-130`
 - Push to your fork
 - Compare using a mock pull request
 - Are there any unintended differences? Fix them now.
