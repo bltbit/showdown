@@ -1,4 +1,4 @@
-/* @jsx jsx */
+/** @jsx jsx **/
 import { css, jsx } from '@emotion/core'
 import { Howl } from 'howler'
 import React, { useCallback, useRef, useState } from 'react'
@@ -63,8 +63,6 @@ const styling = css`
 const STARTING_ANGLE = 33
 const SHOT_ROTATION_ANGLE = 60
 
-const foo = React // so organize imports doesn't remove it
-
 export const useRevolver = () => {
   const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
   const [cylinderRotationProps, setCylinderRotationProps] = useSpring(() => ({
@@ -96,7 +94,7 @@ export const useRevolver = () => {
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder])
 
-  const Image = () => (
+  const Image: React.FC = () => (
     <div css={styling}>
       <animated.div
         className="cylinder"
@@ -106,7 +104,7 @@ export const useRevolver = () => {
           ),
         }}
       >
-        <img src={imageConfig.cylinder} />
+        <img src={imageConfig.cylinder} alt="" />
         <div className="bullets">
           {Array(CYLINDER_CAPACITY)
             .fill(0)
