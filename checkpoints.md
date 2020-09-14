@@ -672,6 +672,44 @@ This is a good example of an intermediate step, or a proof of concept step. Some
 
 ---
 
+# 130 - Spent Shots
+
+http://github.com/bltbit/showdown/tree/checkpoint-130
+
+> Quote
+
+## Objectives
+
+- Show somethign different when a shot has been used up
+
+## Tools
+
+-
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-130 my-checkpoint-120
+```
+
+## Steps
+
+- Implement spent shots
+- Understand `transform: rotate(30deg);` CSS prop
+- Apply to cylinder image
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-130`
+- Push to your fork
+- Compare to the official `checkpoint-130` using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+---
+
 # XX - Template
 
 http://github.com/bltbit/showdown/tree/checkpoint-XX
