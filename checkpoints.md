@@ -185,7 +185,7 @@ How awesome are you!! You just legitimately made a contribution to an open sourc
 
 # 40 - Making a Game
 
-> It's not the notes you play, it's the notes you don't play.
+> It's not the notes you play, it's the notes you don't play.  
 > _~Miles Davis_
 
 ## Objectives
@@ -239,7 +239,7 @@ Starting with a solid foundation is important because it saves time later and re
 
 http://github.com/bltbit/showdown/tree/checkpoint-50
 
-> Touch has a memory.
+> Touch has a memory.  
 > _~John Keats_
 
 ## Objectives
@@ -289,7 +289,7 @@ Now you know a critical tool for programming web and hybrid mobile apps - the Ja
 
 http://github.com/bltbit/showdown/tree/checkpoint-60
 
-> Suddenly, a shot rang out! A door slammed. The maid screamed.
+> Suddenly, a shot rang out! A door slammed. The maid screamed.  
 > _~Charles M. Schultz_
 
 ## Objectives
@@ -343,7 +343,7 @@ Do you own a gun or several? Go squeeze off a few rounds this weekend and record
 
 http://github.com/bltbit/showdown/tree/checkpoint-70
 
-> Just when I thought I was out, they pull me back in.
+> Just when I thought I was out, they pull me back in.  
 > _~Michael Corleone_
 
 ## Objectives
@@ -382,7 +382,7 @@ You just learned the difference between `onClick` and `onTouchStart`. While `onC
 
 http://github.com/bltbit/showdown/tree/checkpoint-80
 
-> Many of the things you can count, don't count
+> Many of the things you can count, don't count.  
 > _~Albert Einstein_
 
 ## Objectives
@@ -421,7 +421,7 @@ Nice, this is starting to feel more like a revolver. It has 6 shots and then it'
 
 http://github.com/bltbit/showdown/tree/checkpoint-90
 
-> If you can get today’s work done today, but you do it in such a way that you can’t possibly get tomorrow’s work done tomorrow, then you lose.
+> If you can get today’s work done today, but you do it in such a way that you can’t possibly get tomorrow’s work done tomorrow, then you lose.  
 > _~Martin Fowler_
 
 ## Objectives
@@ -488,7 +488,7 @@ You're on fire! You did your first refactoring. Skillful refactoring is the hall
 
 http://github.com/bltbit/showdown/tree/checkpoint-100
 
-> An empty gun can tell a man a lot of things.
+> An empty gun can tell a man a lot of things.  
 > _~Paladin; Have Gun - Will Travel_
 
 ## Objectives
@@ -534,6 +534,7 @@ git checkout -b my-checkpoint-100 my-checkpoint-90
   - finalize `package.json` scripts
 - Swap out current Howler config for `./build/audio.json`
   - Problem: typescript error!
+    - Can hadle with `//@@ts-ignore`, but we're learning!
   - Modify `@types/howler`
     - Howler is used by the `pwa/package.json`, we must modify at that level
     - `cd ../..`
@@ -555,6 +556,54 @@ This was a monster of a lesson. It's a good thing we refactored so we had a nice
 You successfully created audio sprites and embedded them in your code, thus maintaining encapsulation principles. This isn't strictly necessary, but it's good to know how to do this because sometimes it really does make things a lot cleaner and separates concerns. It's amazing how doing the `Bang` sound was somewhat straightforward; but as soon as you want to repeat the effort, you realize it won't scale. Sometimes the 2nd or 3rd effort leads to refactoring and automation that seems overly complex is actually an investment in your future.
 
 **[Bonus]** You patched two packages, and because you already know how to fork, clone, and create pull requests, you could even send a PR back to those package authors if you wanted to be a super good citizen. In fact, the first person to do this will receive an `iddqd` level [BitBlt Patreon](https://www.patreon.com/bltbit) status for 1 year.
+
+---
+
+# 110 - Adding Realism (trigger throttle)
+
+http://github.com/bltbit/showdown/tree/checkpoint-110
+
+> The only limitation is that which one sets up in one's own mind.  
+> _~Napoleon Hill_
+
+## Objectives
+
+- Learn the difference between what needs to be in React state and what doesn't
+- Learn how to throttle user input
+- Learn about `useRef`
+- Learn about `setTimeout`
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-110 my-checkpoint-100
+```
+
+## Steps
+
+- Load your app on a mobile device
+- Drum your fingers across the screen quickly and notice how fast it shoots.
+- Nobody shoots that fast, revolvers don't move that fast
+- How fast _can_ someone shoot?
+  - https://www.youtube.com/watch?v=WzHG-ibZaKM&ab_channel=JerryMiculek-ProShooter
+  - Maybe 100ms throttle?
+- Implement throttle pattern using `useRef` and `setTimeout`
+  - `useState` is not a good choice because:
+    - It causes unnecessary re-renders
+    - Double taps can sneak in before state updates
+- Retest on mobile device. Touches are blocked while the gun is busy
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-110`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+If you thought this step was easy, you might be in slim company. The real subtlty to this checkpoint is understanding why `useRef` works for the `gunBusy` flag rather than having to use `useState`, and why in fact `useState` is not a good choice. Many hours are spent debugging React state, so it's critical to spend some time understanding why it works, when it works, and what other alternatives are available.
 
 ---
 
