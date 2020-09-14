@@ -1,3 +1,5 @@
+/* @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import { Howl } from 'howler'
 import React, { useCallback, useRef, useState } from 'react'
 import audioConfig from './build/audiob64.json'
@@ -6,6 +8,54 @@ import { SpriteNames } from './build/SpriteNames'
 
 const CYLINDER_CAPACITY = 6
 const GUN_ACTION_DELAY = 100
+
+const styling = css`
+  .cylinder {
+    position: absolute;
+    transform: rotate(33deg);
+    .bullets {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      & .bullet {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: green;
+      }
+      & .bullet-spent {
+        background-color: black;
+      }
+      & .bullet-1 {
+        top: 4px;
+        left: 8px;
+      }
+      & .bullet-2 {
+        top: 17px;
+        left: 2px;
+      }
+      & .bullet-3 {
+        top: 28px;
+        left: 9px;
+      }
+      & .bullet-4 {
+        top: 28px;
+        left: 23px;
+      }
+      & .bullet-5 {
+        top: 15px;
+        left: 30px;
+      }
+      & .bullet-6 {
+        top: 3px;
+        left: 22px;
+      }
+    }
+  }
+`
+
+const foo = React // so organize imports doesn't remove it
 
 export const useRevolver = () => {
   const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
@@ -29,7 +79,26 @@ export const useRevolver = () => {
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder])
 
-  const Image = () => <img src={imageConfig.cylinder} />
+  const Image = () => (
+    <div css={styling}>
+      <div className="cylinder">
+        <img src={imageConfig.cylinder} />
+        <div className="bullets">
+          {Array(CYLINDER_CAPACITY)
+            .fill(0)
+            .map((j, i) => (
+              <div
+                className={`bullet bullet-${i + 1} ${
+                  CYLINDER_CAPACITY - bulletsInCylinder > i
+                    ? `bullet-spent`
+                    : ''
+                }`}
+              ></div>
+            ))}
+        </div>
+      </div>
+    </div>
+  )
 
   return { handleTriggerPull, Image }
 }

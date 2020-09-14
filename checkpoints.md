@@ -636,7 +636,7 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 
 ## Steps
 
-## Part 1: Red box with cylinder image
+### Part 1: Red box with cylinder image
 
 - Search https://www.pngguru.com/search?png=chamber+revolver for suitable images
 - I really love https://www.pngguru.com/free-transparent-background-png-clipart-epbjj
@@ -653,6 +653,17 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
     - this will need to be a component that comes from `useRevolver`
     - convert to `index.tsx`
     - add css styling to size and contain it
+
+### Part 2: Cylinder rotation and spent shot markers
+
+- This intermediate step is in github branch `checkpoint-120-part-2`
+- Implement spent shots
+- Understand `transform: rotate(30deg);` CSS prop
+- Apply to cylinder image
+
+### Part 3: Animate spen shots
+
+- Play with color and opacity
 
 ## Commit, Push, and Compare
 
