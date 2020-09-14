@@ -1,0 +1,13 @@
+diff --git a/node_modules/@types/howler/index.d.ts b/node_modules/@types/howler/index.d.ts
+index 205928a..898b75c 100644
+--- a/node_modules/@types/howler/index.d.ts
++++ b/node_modules/@types/howler/index.d.ts
+@@ -146,7 +146,7 @@ export interface HowlOptions extends HowlListeners {
+      * @default `{}`
+      */
+     sprite?: {
+-        [name: string]: [number, number] | [number, number, boolean];
++        [name: string]: number[] | [number, number] | [number, number, boolean];
+     };
+ 
+     /**

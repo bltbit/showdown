@@ -1,10 +1,10 @@
 <?xml version="1.0" standalone="no" ?>
 <!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
-<project xmlns="http://audacity.sourceforge.net/xml/" projname="sound-sprites_data" version="1.3.0" audacityversion="2.4.2" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="1502.7777777778" rate="48000.0" snapto="off" selectionformat="seconds" frequencyformat="Hz" bandwidthformat="octaves">
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="sound-sprites_data" version="1.3.0" audacityversion="2.4.2" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="496.0983198507" rate="48000.0" snapto="off" selectionformat="seconds" frequencyformat="Hz" bandwidthformat="octaves">
 	<tags>
 		<tag name="Software" value=""/>
 	</tags>
-	<wavetrack name="Bang" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="Bang" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="15395">
 				<waveblock start="0">
@@ -14,11 +14,21 @@
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="Bang" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="Bang" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="15395">
 				<waveblock start="0">
 					<simpleblockfile filename="eff1fb88.au" len="15395" min="-0.865417" max="0.790222" rms="0.211802"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Empty" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="22050" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2098">
+				<waveblock start="0">
+					<simpleblockfile filename="eff1f8d2.au" len="2098" min="-0.734375" max="0.710938" rms="0.172472"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
