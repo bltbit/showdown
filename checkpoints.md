@@ -72,7 +72,7 @@ Congratulations, you have forked a github project, run a modern responsive Progr
 
 ---
 
-# [20 - Firebase Initialization and Deployment](#checkpoint-20)
+# 20 - Firebase Initialization and Deployment
 
 http://github.com/bltbit/showdown/tree/checkpoint-20
 
