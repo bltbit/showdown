@@ -627,6 +627,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-120
 
 - Gimp
 - imagemin
+- glob
 
 ## Create your branch
 
@@ -648,7 +649,7 @@ git checkout -b my-checkpoint-120 my-checkpoint-110
     - Add a quasi-light source using CSS
     - Too hard for this step, let's just go with what we have. Maybe it'll look cool anyway.
 - Export
-- Create `package.json` script for `imagemin`
+- Create `package.json` script for `imagemin-cli`
 - Update the base64 encoder to save both audio and image data in base64 format
 - Create a `<div>` block with red background styling to be the snack tray
   - use `position:absolute` and `top`, `bottom`, `left`, `right`, `width`, `height` to position the tray where you want it
