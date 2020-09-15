@@ -144,7 +144,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-20
 
 ---
 
-# [30 - Your First Pull Request](#checkpoint-30)
+# 30 - Your First Pull Request
 
 http://github.com/bltbit/showdown/tree/checkpoint-30
 
