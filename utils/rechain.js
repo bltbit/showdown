@@ -9,7 +9,7 @@ naturalSort.insensitive = true
     .filter((k) => k.startsWith('checkpoint-'))
     .sort(naturalSort)
   branches.push('master')
-  console.log(`Rechaining branches: ${branches.join(' ')}`)
+  console.log(`Rechaining branches: \n${branches.join('\n')}`)
 
   for (let i = 1; i < branches.length; i++) {
     const fromBranch = branches[i - 1]
