@@ -607,9 +607,9 @@ If you thought this step was easy, you might be in slim company. The real subtlt
 
 ---
 
-# 110 - Adding Visuals: Revolver Cylinder
+# 120 - Adding Visuals: Revolver Cylinder
 
-http://github.com/bltbit/showdown/tree/checkpoint-110
+http://github.com/bltbit/showdown/tree/checkpoint-120
 
 > God made all men, but Samuel Colt made all men equal.  
 > _~Cherie Priest_
@@ -631,7 +631,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-110
 ## Create your branch
 
 ```
-git checkout -b my-checkpoint-110 my-checkpoint-100
+git checkout -b my-checkpoint-120 my-checkpoint-110
 ```
 
 ## Steps
@@ -660,7 +660,47 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
 
 ## Commit, Push, and Compare
 
-- Commit your work to `my-checkpoint-110`
+- Commit your work to `my-checkpoint-120`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+This is a good example of an intermediate step, or a proof of concept step. Sometimes called a "spike", we roughed out how we might want the snack tray and revolver cylinder to look.
+
+---
+
+# 130 - Spent Shots
+
+http://github.com/bltbit/showdown/tree/checkpoint-130
+
+> Quote
+
+## Objectives
+
+- Do something when bullets have been used
+
+## Tools
+
+-
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-130 my-checkpoint-120
+```
+
+## Steps
+
+- Implement spent shots
+- Understand `transform: rotate(30deg);` CSS prop
+- Apply to cylinder image
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-130`
 - Push to your fork
 - Compare using a mock pull request
 - Are there any unintended differences? Fix them now.
