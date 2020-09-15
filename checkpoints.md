@@ -749,6 +749,44 @@ Baby steps. Now the cylinder can rotate so the next live round is always in the 
 
 ---
 
+# 150 - Add easing animation to revolver spin
+
+http://github.com/bltbit/showdown/tree/checkpoint-150
+
+> Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius — and a lot of courage to move in the opposite direction.  
+> _~E.F. Schumacher_
+
+## Objectives
+
+- Add smooth rotation to revolver spin
+
+## Tools
+
+- react-spring
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-150 my-checkpoint-140
+```
+
+## Steps
+
+- Track the rotation angle using `useSpring`
+- Convert to an animated div
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-150`
+- Push to your fork
+- Compare to the official `checkpoint-150` using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+---
+
 # XX - Template
 
 http://github.com/bltbit/showdown/tree/checkpoint-XX
