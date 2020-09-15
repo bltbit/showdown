@@ -607,9 +607,9 @@ If you thought this step was easy, you might be in slim company. The real subtlt
 
 ---
 
-# 110 - Adding Visuals: Revolver Cylinder
+# 120 - Adding Visuals: Revolver Cylinder
 
-http://github.com/bltbit/showdown/tree/checkpoint-110
+http://github.com/bltbit/showdown/tree/checkpoint-120
 
 > God made all men, but Samuel Colt made all men equal.  
 > _~Cherie Priest_
@@ -627,17 +627,15 @@ http://github.com/bltbit/showdown/tree/checkpoint-110
 
 - Gimp
 - imagemin
-- react-spring
+- glob
 
 ## Create your branch
 
 ```
-git checkout -b my-checkpoint-110 my-checkpoint-100
+git checkout -b my-checkpoint-120 my-checkpoint-110
 ```
 
 ## Steps
-
-### Part 1: Red box with cylinder image
 
 - Search https://www.pngguru.com/search?png=chamber+revolver for suitable images
 - I really love https://www.pngguru.com/free-transparent-background-png-clipart-epbjj
@@ -651,57 +649,103 @@ git checkout -b my-checkpoint-110 my-checkpoint-100
     - Add a quasi-light source using CSS
     - Too hard for this step, let's just go with what we have. Maybe it'll look cool anyway.
 - Export
-- Create `package.json` script for `imagemin`
+- Create `package.json` script for `imagemin-cli`
 - Update the base64 encoder to save both audio and image data in base64 format
 - Create a `<div>` block with red background styling to be the snack tray
   - use `position:absolute` and `top`, `bottom`, `left`, `right`, `width`, `height` to position the tray where you want it
   - add a nice rounded border using `border-radius` and `border-color` attributes
-  - add the revolver image we generated
-    - this will need to be a component that comes from `useRevolver`
-    - convert to `index.tsx`
-    - add css styling to size and contain it
-
-### Part 2: Cylinder alignment and spent shot markers
-
-- This intermediate step is in github branch `checkpoint-120-part-2`
-- Implement spent shots
-- Understand `transform: rotate(30deg);` CSS prop
-- Apply to cylinder image
-
-### Part 3: Cylinder rotation animation when shooting
-
-- This intermediate step is in github branch `checkpoint-120-part-3`
-- Thinking about how the revolver works
-  - Hammer cocks back
-  - Cylinder rotates next round into place
-  - Pull trigger to shoot
-  - Repeatt to prepare for next round
-  - This means we need sounds and motion _after_ the bang
-- Rotating after
-  - Quick math: 6 shots, 360 derees = 60 degrees per shot
-    - Let's see if that's right
-  - Figure out starting angle and refactor
-  - Move to `checkpoint-120-part-3-b`
-  - Increment/reset degree adjustment on every shot
-    - Noticing slightly weird rotation
-    - Adjust containing `<div>` width and height to `100%`
-  - Move to `checkpoint-120-part-3-c`
-  - The rotation angle works, but it's too choppy.
-    - Use `react-spring` to smooth it out
-
-### Part 3: Animate spen shots
-
-- Play with color and opacity
+- Add the revolver image we generated
+  - this will need to be a component that comes from `useRevolver`
+  - convert to `index.tsx`
+  - add css styling to size and contain it
 
 ## Commit, Push, and Compare
 
-- Commit your work to `my-checkpoint-110`
+- Commit your work to `my-checkpoint-120`
 - Push to your fork
 - Compare using a mock pull request
 - Are there any unintended differences? Fix them now.
 - Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
 
 ## Review
+
+This is a good example of an intermediate step, or a proof of concept step. Sometimes called a "spike", we roughed out how we might want the snack tray and revolver cylinder to look.
+
+---
+
+# 130 - Spent Shots
+
+http://github.com/bltbit/showdown/tree/checkpoint-130
+
+> Quote
+
+## Objectives
+
+- Do something when bullets have been used
+
+## Tools
+
+-
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-130 my-checkpoint-120
+```
+
+## Steps
+
+- Implement spent shots
+- Understand `transform: rotate(30deg);` CSS prop
+- Apply to cylinder image
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-130`
+- Push to your fork
+- Compare using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+This is a good example of an intermediate step, or a proof of concept step. Sometimes called a "spike", we roughed out how we might want the snack tray and revolver cylinder to look.
+
+---
+
+# 140 - Cylinder Rotation
+
+http://github.com/bltbit/showdown/tree/checkpoint-140
+
+> Quote
+
+## Objectives
+
+- Rotate the revolver cylinder when shots are fired
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-140 my-checkpoint-130
+```
+
+## Steps
+
+- Add styling so revolver cylinder properly rotates about its center
+- Track rotation offset and angle
+- Move transform into component for live adjustment
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-140`
+- Push to your fork
+- Compare to the official `checkpoint-140` using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+Baby steps. Now the cylinder can rotate so the next live round is always in the chamber.
 
 ---
 

@@ -92,7 +92,7 @@ export const useRevolver = () => {
 
     setBulletsInCylinder((c) => c - 1)
     howlRef.current?.play(SpriteNames.Bang)
-  }, [bulletsInCylinder])
+  }, [bulletsInCylinder, cylinderRotationProps, setCylinderRotationProps])
 
   const Image: React.FC = () => (
     <div css={styling}>
