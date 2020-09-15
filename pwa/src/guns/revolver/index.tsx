@@ -11,8 +11,13 @@ const GUN_ACTION_DELAY = 100
 
 const styling = css`
   .cylinder {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    transform: rotate(30deg);
+    img {
+      width: 100%;
+      height: 100%;
+    }
     .bullets {
       position: absolute;
       top: 0px;
@@ -56,9 +61,11 @@ const styling = css`
 `
 
 const STARTING_ANGLE = 33
+const SHOT_ROTATION_ANGLE = 60
 
 export const useRevolver = () => {
   const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
+  const [rotationoffset, setRotationOffset] = useState(0)
   const gunStatusRef = useRef({ isBusy: false })
 
   const howlRef = useRef(new Howl(audioConfig))
@@ -69,6 +76,8 @@ export const useRevolver = () => {
     setTimeout(() => {
       gunStatusRef.current.isBusy = false
     }, GUN_ACTION_DELAY)
+
+    setRotationOffset((o) => o + SHOT_ROTATION_ANGLE)
 
     if (bulletsInCylinder === 0) {
       howlRef.current?.play(SpriteNames.Empty)
@@ -83,7 +92,7 @@ export const useRevolver = () => {
     <div css={styling}>
       <div
         className="cylinder"
-        style={{ transform: `rotate(${STARTING_ANGLE}deg)` }}
+        style={{ transform: `rotate(${STARTING_ANGLE + rotationoffset}deg)` }}
       >
         <img src={imageConfig.cylinder} alt="" />
         <div className="bullets">
