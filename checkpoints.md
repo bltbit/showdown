@@ -785,6 +785,41 @@ git checkout -b my-checkpoint-150 my-checkpoint-140
 
 ---
 
+# 160 - Reload
+
+http://github.com/bltbit/showdown/tree/checkpoint-160
+
+> So get up, dust off, reload, recalibrate, re-engage – and go out on the attack.  
+> _~Jocko Willink_
+
+## Objectives
+
+-
+
+## Tools
+
+## Create your branch
+
+```
+git checkout -b my-checkpoint-160 my-checkpoint-150
+```
+
+## Steps
+
+-
+
+## Commit, Push, and Compare
+
+- Commit your work to `my-checkpoint-160`
+- Push to your fork
+- Compare to the official `checkpoint-160` using a mock pull request
+- Are there any unintended differences? Fix them now.
+- Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
+
+## Review
+
+---
+
 # XX - Template
 
 http://github.com/bltbit/showdown/tree/checkpoint-XX
