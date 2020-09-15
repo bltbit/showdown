@@ -677,15 +677,12 @@ This is a good example of an intermediate step, or a proof of concept step. Some
 
 http://github.com/bltbit/showdown/tree/checkpoint-130
 
-> Quote
+> It’s what you do with those second chances that counts.  
+> _~Dave Wilson_
 
 ## Objectives
 
-- Do something when bullets have been used
-
-## Tools
-
--
+- Show something when bullets have been used
 
 ## Create your branch
 
@@ -708,6 +705,8 @@ git checkout -b my-checkpoint-130 my-checkpoint-120
 - Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
 
 ## Review
+
+This is a good example of an intermediate step, or a proof of concept step. Sometimes called a "spike", we roughed out how we might want the snack tray and revolver cylinder to look.
 
 ---
 
