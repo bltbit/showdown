@@ -7,7 +7,7 @@
 
 ---
 
-# [10 - Boilerplate and Physical Device Testing](#checkpoint-10)
+# Boilerplate and Physical Device Testing
 
 http://github.com/bltbit/showdown/tree/checkpoint-10
 
