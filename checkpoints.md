@@ -229,7 +229,7 @@ Starting with a solid foundation is important because it saves time later and re
 
 ---
 
-# [50 - Interactivity: Your First Click Handler](#checkpoint-50)
+# Interactivity: Your First Click Handler
 
 http://github.com/bltbit/showdown/tree/checkpoint-50
 
