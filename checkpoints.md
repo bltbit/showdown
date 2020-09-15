@@ -713,41 +713,39 @@ This is a good example of an intermediate step, or a proof of concept step. Some
 
 ---
 
-# 130 - Spent Shots
+# 140 - Cylinder Rotation
 
-http://github.com/bltbit/showdown/tree/checkpoint-130
+http://github.com/bltbit/showdown/tree/checkpoint-140
 
 > Quote
 
 ## Objectives
 
-- Show somethign different when a shot has been used up
-
-## Tools
-
--
+- Rotate the revolver cylinder when shots are fired
 
 ## Create your branch
 
 ```
-git checkout -b my-checkpoint-130 my-checkpoint-120
+git checkout -b my-checkpoint-140 my-checkpoint-130
 ```
 
 ## Steps
 
-- Implement spent shots
-- Understand `transform: rotate(30deg);` CSS prop
-- Apply to cylinder image
+- Add styling so revolver cylinder properly rotates about its center
+- Track rotation offset and angle
+- Move transform into component for live adjustment
 
 ## Commit, Push, and Compare
 
-- Commit your work to `my-checkpoint-130`
+- Commit your work to `my-checkpoint-140`
 - Push to your fork
-- Compare to the official `checkpoint-130` using a mock pull request
+- Compare to the official `checkpoint-140` using a mock pull request
 - Are there any unintended differences? Fix them now.
 - Questions or problems? [Report an issue](https://github.com/bltbit/showdown/issues) to the Showdown repository.
 
 ## Review
+
+Baby steps. Now the cylinder can rotate so the next live round is always in the chamber.
 
 ---
 
