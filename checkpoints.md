@@ -7,7 +7,7 @@
 
 ---
 
-# [10 - Boilerplate and Physical Device Testing](#checkpoint-10)
+# Boilerplate and Physical Device Testing
 
 http://github.com/bltbit/showdown/tree/checkpoint-10
 
@@ -72,7 +72,7 @@ Congratulations, you have forked a github project, run a modern responsive Progr
 
 ---
 
-# [20 - Firebase Initialization and Deployment](#checkpoint-20)
+# 20 - Firebase Initialization and Deployment
 
 http://github.com/bltbit/showdown/tree/checkpoint-20
 
@@ -144,7 +144,7 @@ http://github.com/bltbit/showdown/tree/checkpoint-20
 
 ---
 
-# [30 - Your First Pull Request](#checkpoint-30)
+# 30 - Your First Pull Request
 
 http://github.com/bltbit/showdown/tree/checkpoint-30
 
@@ -177,7 +177,7 @@ How awesome are you!! You just legitimately made a contribution to an open sourc
 
 ---
 
-# [40 - Making a Game](#checkpoint-40)
+# Making a Game
 
 > It's not the notes you play, it's the notes you don't play.
 > _~Miles Davis_
