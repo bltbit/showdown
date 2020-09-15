@@ -12,6 +12,7 @@ const GUN_ACTION_DELAY = 100
 const styling = css`
   .cylinder {
     position: absolute;
+    transform: rotate(30deg);
     .bullets {
       position: absolute;
       top: 0px;

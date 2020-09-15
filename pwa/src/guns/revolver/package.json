@@ -18,7 +18,6 @@
   },
   "devDependencies": {
     "glob": "^7.1.6",
-    "imagemin": "^7.0.1",
     "imagemin-cli": "^6.0.0",
     "patch-package": "^6.2.2"
   }
