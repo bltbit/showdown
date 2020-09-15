@@ -677,15 +677,12 @@ This is a good example of an intermediate step, or a proof of concept step. Some
 
 http://github.com/bltbit/showdown/tree/checkpoint-130
 
-> Quote
+> It’s what you do with those second chances that counts.  
+> _~Dave Wilson_
 
 ## Objectives
 
-- Do something when bullets have been used
-
-## Tools
-
--
+- Show something when bullets have been used
 
 ## Create your branch
 
@@ -717,7 +714,8 @@ This is a good example of an intermediate step, or a proof of concept step. Some
 
 http://github.com/bltbit/showdown/tree/checkpoint-140
 
-> Quote
+> All that is important is this one moment in movement. Make the moment important, vital, and worth living. Do not let it slip away unnoticed and unused.  
+> _~Martha Graham_
 
 ## Objectives
 
