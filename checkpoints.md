@@ -654,10 +654,10 @@ git checkout -b my-checkpoint-120 my-checkpoint-110
 - Create a `<div>` block with red background styling to be the snack tray
   - use `position:absolute` and `top`, `bottom`, `left`, `right`, `width`, `height` to position the tray where you want it
   - add a nice rounded border using `border-radius` and `border-color` attributes
-  - add the revolver image we generated
-    - this will need to be a component that comes from `useRevolver`
-    - convert to `index.tsx`
-    - add css styling to size and contain it
+- Add the revolver image we generated
+  - this will need to be a component that comes from `useRevolver`
+  - convert to `index.tsx`
+  - add css styling to size and contain it
 
 ## Commit, Push, and Compare
 
