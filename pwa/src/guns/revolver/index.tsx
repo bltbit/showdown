@@ -86,6 +86,7 @@ export const useRevolver = () => {
             .fill(0)
             .map((j, i) => (
               <div
+                key={i}
                 className={`bullet bullet-${i + 1} ${
                   CYLINDER_CAPACITY - bulletsInCylinder > i
                     ? `bullet-spent`
