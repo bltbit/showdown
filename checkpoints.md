@@ -177,7 +177,7 @@ How awesome are you!! You just legitimately made a contribution to an open sourc
 
 ---
 
-# [40 - Making a Game](#checkpoint-40)
+# Making a Game
 
 > It's not the notes you play, it's the notes you don't play.
 > _~Miles Davis_
