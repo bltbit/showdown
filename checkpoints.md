@@ -279,7 +279,7 @@ Now you know a critical tool for programming web and hybrid mobile apps - the Ja
 
 ---
 
-# [60 - Add gunshot sound](#checkpoint-50)
+# 60 - Add gunshot sound
 
 http://github.com/bltbit/showdown/tree/checkpoint-60
 
@@ -332,6 +332,7 @@ Wow! You just learned how to edit sounds like a pro, which basically means you c
 Do you own a gun or several? Go squeeze off a few rounds this weekend and record it. Record other gun sounds too, like various clicks and reloading. Then, upload it to Freesounds and add a section to our `readme.md` under a heading of "Origianl Student Sounds". Send a pull request! If you do this and it's a clean recording, I'll give you 1 year of `idkfa` on [BitBlt Patron](https://www.patreon.com/bltbit).
 
 ---
+
 # [XX - Template](#checkpoint-XX)
 
 http://github.com/bltbit/showdown/tree/checkpoint-XX
