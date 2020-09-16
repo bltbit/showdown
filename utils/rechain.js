@@ -22,11 +22,12 @@ naturalSort.insensitive = true
     // console.log(`Committing "${memo}" to ${toBranch}`)
     // await git.commit(memo)
   }
-  const branchNames = branches.join(' ')
-  console.log(`Pushing branches ${branchNames}`)
-  await git.push('origin', branches)
 
   const finalBranch = branches[branches.length - 2]
   console.log(`Checking out ${finalBranch}`)
   await git.checkout(finalBranch)
+
+  console.log(`Pushing branches ${branchNames}`)
+  await git.push('origin', branches)
+  const branchNames = branches.join(' ')
 })()
