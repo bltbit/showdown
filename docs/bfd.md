@@ -6,6 +6,7 @@ BFD is a list of tools that you will need to complete this course. You can compl
 
 - VSCode
 - Gimp
+- Audacity
 
 ## CLI Tools
 
@@ -37,7 +38,7 @@ TODO - Can you supply Windows-specific notes? Send a Pull Request!
 
 ### File System
 
-Do all your work on an `APFS Volume`. Use Disk Utility to create one. This is required becasue many of the files and packages we use in programming are case sensitive and require a case sensitive file system. Linux has one by default, but Windows and OS X do not.
+Do all your work on an `APFS Volume`. Use Disk Utility to create one. This is required because many of the files and packages we use in programming are case sensitive and require a case sensitive file system. Linux has one by default, but Windows and OS X do not.
 
 ### Apps
 
