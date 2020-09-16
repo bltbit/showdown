@@ -6,8 +6,6 @@ import { animated, useSpring } from 'react-spring'
 import audioConfig from './build/audiob64.json'
 import imageConfig from './build/imageb64.json'
 import { SpriteNames } from './build/SpriteNames'
-const CYLINDER_CAPACITY = 6
-const GUN_ACTION_DELAY = 100
 
 const styling = css`
   .cylinder {
@@ -73,9 +71,10 @@ const styling = css`
   }
 `
 
+const CYLINDER_CAPACITY = 6
+const GUN_ACTION_DELAY = 100
 const STARTING_ANGLE = 33
 const SHOT_ROTATION_ANGLE = 60
-const MAX_BULLETS = 6
 
 export const useRevolver = () => {
   const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
@@ -117,7 +116,7 @@ export const useRevolver = () => {
     howlRef.current?.play(SpriteNames.Reload)
     setTimeout(() => {
       gunStatusRef.current.isBusy = false
-      setBulletsInCylinder(MAX_BULLETS)
+      setBulletsInCylinder(CYLINDER_CAPACITY)
       setIsReloading(false)
     }, audioConfig.sprite.Reload[1] - 400)
   }
