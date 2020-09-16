@@ -11,6 +11,7 @@ const styling = css({
   right: 0,
   top: 0,
   bottom: 0,
+  overflow: 'hidden',
 })
 
 const CYLINDER_CAPACITY = 6
