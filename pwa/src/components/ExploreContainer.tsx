@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import React from 'react'
+import React, { FC, TouchEvent, useState } from 'react'
 import { useRevolver } from '../guns/revolver'
 
 interface ContainerProps {}
@@ -12,6 +12,10 @@ const styling = css`
   top: 0;
   bottom: 0;
   overflow: hidden;
+  .shot {
+    background-color: red;
+    position: absolute;
+  }
   .gunControl {
     position: absolute;
     width: 110px;
@@ -37,6 +41,14 @@ const styling = css`
   }
 `
 
+export type Shot = {
+  x: number
+  y: number
+  w: number
+  h: number
+  render: FC
+}
+
 const ExploreContainer: React.FC<ContainerProps> = () => {
   const {
     handleTriggerPull,
@@ -44,8 +56,29 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
     handleReload,
     spareBulletsRemaining,
   } = useRevolver()
+
+  const [activeShots, setActiveshots] = useState<Shot[]>([])
+
+  const _handleTriggerPull = (e: TouchEvent<HTMLDivElement>) => {
+    const shot = handleTriggerPull(e)
+    if (!shot) return // Misfire, out of ammo, something
+    setActiveshots((s) => [...s, shot])
+  }
+
   return (
-    <div css={styling} onTouchStart={handleTriggerPull}>
+    <div css={styling} onTouchStart={_handleTriggerPull}>
+      {activeShots.map(({ x, y, w, h }, i) => (
+        <div
+          key={i}
+          className="shot"
+          style={{
+            top: y - h / 2,
+            left: x - w / 2,
+            width: w,
+            height: h,
+          }}
+        ></div>
+      ))}
       <div className="gunControl" onTouchStart={handleReload}>
         <div className="reloads">{spareBulletsRemaining}</div>
         <div className="gunImage">

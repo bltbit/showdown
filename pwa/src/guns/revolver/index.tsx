@@ -1,8 +1,9 @@
 /** @jsx jsx **/
 import { css, jsx } from '@emotion/core'
 import { Howl } from 'howler'
-import React, { useCallback, useRef, useState } from 'react'
+import React, { TouchEvent, useCallback, useRef, useState } from 'react'
 import { animated, useSpring } from 'react-spring'
+import { Shot } from '../../components/ExploreContainer'
 import audioConfig from './build/audiob64.json'
 import imageConfig from './build/imageb64.json'
 import { SpriteNames } from './build/SpriteNames'
@@ -76,6 +77,8 @@ const GUN_ACTION_DELAY = 100
 const STARTING_ANGLE = 33
 const SHOT_ROTATION_ANGLE = 60
 const MAX_RELOADS = 3
+const SHOT_WIDTH = 20
+const SHOT_HEIGHT = 20
 
 export const useRevolver = () => {
   const [spareBulletsRemaining, setSpareBulletsRemaining] = useState(
@@ -92,25 +95,45 @@ export const useRevolver = () => {
 
   const howlRef = useRef(new Howl(audioConfig))
 
-  const handleTriggerPull = useCallback(() => {
-    if (gunStatusRef.current.isBusy) return
-    gunStatusRef.current.isBusy = true
-    setTimeout(() => {
-      gunStatusRef.current.isBusy = false
-    }, GUN_ACTION_DELAY)
+  const handleTriggerPull = useCallback(
+    (e: TouchEvent<HTMLDivElement>): Shot | undefined => {
+      if (gunStatusRef.current.isBusy) return
+      gunStatusRef.current.isBusy = true
+      setTimeout(() => {
+        gunStatusRef.current.isBusy = false
+      }, GUN_ACTION_DELAY)
 
-    setCylinderRotationProps({
-      angle: cylinderRotationProps.angle.getValue() + SHOT_ROTATION_ANGLE,
-    })
+      setCylinderRotationProps({
+        angle: cylinderRotationProps.angle.getValue() + SHOT_ROTATION_ANGLE,
+      })
 
-    if (bulletsInCylinder === 0) {
-      howlRef.current?.play(SpriteNames.Empty)
-      return
-    }
+      if (bulletsInCylinder === 0) {
+        howlRef.current?.play(SpriteNames.Empty)
+        return
+      }
 
-    setBulletsInCylinder((c) => c - 1)
-    howlRef.current?.play(SpriteNames.Bang)
-  }, [bulletsInCylinder, cylinderRotationProps, setCylinderRotationProps])
+      setBulletsInCylinder((c) => c - 1)
+      howlRef.current?.play(SpriteNames.Bang)
+
+      const { clientX, clientY } = e.touches[0]
+      return {
+        x: clientX,
+        y: clientY,
+        w: SHOT_WIDTH,
+        h: SHOT_HEIGHT,
+        render: () => (
+          <div
+            style={{
+              backgroundColor: 'red',
+              width: SHOT_WIDTH,
+              height: SHOT_HEIGHT,
+            }}
+          ></div>
+        ),
+      }
+    },
+    [bulletsInCylinder, cylinderRotationProps, setCylinderRotationProps]
+  )
 
   const handleReload = useCallback(() => {
     if (gunStatusRef.current.isBusy) return
