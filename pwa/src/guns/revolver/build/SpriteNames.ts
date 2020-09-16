@@ -1,5 +1,6 @@
 
 export enum SpriteNames {
     Bang = 'Bang',
-Empty = 'Empty'
+Empty = 'Empty',
+Reload = 'Reload'
 }

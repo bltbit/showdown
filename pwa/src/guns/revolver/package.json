@@ -4,9 +4,8 @@
   "description": "",
   "main": "build.js",
   "scripts": {
-    "base64": "node b64encode.js",
-    "image:generate": "imagemin ./images/originals/revolver-cylinder-resized.png > ./build/cylinder.png",
-    "audio:generate": "npm run audio:generate:sprites && npm run audio:generate:typings",
+    "image:generate": "imagemin ./images/originals/revolver-cylinder-resized.png > ./build/cylinder.png && node b64images.js",
+    "audio:generate": "npm run audio:generate:sprites && npm run audio:generate:typings && node b64audio.js",
     "audio:generate:sprites": "audiosprite --format howler2 -g 1 --output build/audio ./sounds/export/*.wav",
     "audio:generate:typings": "node genAudioSpriteTypes.js > build/SpriteNames.ts"
   },
