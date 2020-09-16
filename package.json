@@ -5,7 +5,8 @@
   "repository": "bltbit/showdown",
   "scripts": {
     "rechain": "node utils/rechain.js",
-    "faces": "node utils/showdowns.js"
+    "faces": "node utils/showdowns.js",
+    "nc": "node utils/new-checkpoint.js"
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.1",
