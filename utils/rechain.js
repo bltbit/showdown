@@ -27,7 +27,7 @@ naturalSort.insensitive = true
   console.log(`Checking out ${finalBranch}`)
   await git.checkout(finalBranch)
 
+  const branchNames = branches.join(' ')
   console.log(`Pushing branches ${branchNames}`)
   await git.push('origin', branches)
-  const branchNames = branches.join(' ')
 })()
