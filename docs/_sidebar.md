@@ -16,7 +16,7 @@
   - [130 - Spent Shots](c/cp130)
   - [140 - Cylinder Rotation](c/cp140)
   - [150 - Add easing animation to revolver spin](c/cp150)
-  - [](c/cp)
+  - [160 - Reload](c/cp160)
   - [](c/cp)
   - [](c/cp)
   - [](c/cp)
