@@ -30,7 +30,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "rechain": "node utils/rechain.js",
-    "faces": "node utils/showdowns.js"
+    "faces": "node utils/showdowns.js",
+    "nc": "node utils/new-checkpoint.js"
   },
   "eslintConfig": {
     "extends": "react-app"
