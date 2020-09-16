@@ -32,7 +32,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ngrok": "ngrok http 3000"
+    "ngrok": "ngrok http 3000",
+    "icons": "npm run icons:favicon && npm run icons:icon",
+    "icons:favicon": "imagemin ./art/exports/favicon.png > ./public/assets/icon/favicon.png",
+    "icons:icon": "imagemin ./art/exports/icon.png > ./public/assets/icon/icon.png"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,6 +55,7 @@
   "devDependencies": {
     "@capacitor/cli": "2.4.1",
     "image-data-uri": "^2.0.1",
+    "imagemin-cli": "^6.0.0",
     "install": "^0.13.0",
     "npm": "^6.14.8"
   },
