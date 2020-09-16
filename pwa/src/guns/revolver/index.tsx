@@ -75,8 +75,12 @@ const CYLINDER_CAPACITY = 6
 const GUN_ACTION_DELAY = 100
 const STARTING_ANGLE = 33
 const SHOT_ROTATION_ANGLE = 60
+const MAX_RELOADS = 3
 
 export const useRevolver = () => {
+  const [spareBulletsRemaining, setSpareBulletsRemaining] = useState(
+    MAX_RELOADS * CYLINDER_CAPACITY
+  )
   const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
   const [cylinderRotationProps, setCylinderRotationProps] = useSpring(() => ({
     angle: STARTING_ANGLE,
@@ -108,18 +112,35 @@ export const useRevolver = () => {
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder, cylinderRotationProps, setCylinderRotationProps])
 
-  const handleReload = () => {
-    console.log('reload')
+  const handleReload = useCallback(() => {
     if (gunStatusRef.current.isBusy) return
     gunStatusRef.current.isBusy = true
     setIsReloading(true)
     howlRef.current?.play(SpriteNames.Reload)
     setTimeout(() => {
       gunStatusRef.current.isBusy = false
-      setBulletsInCylinder(CYLINDER_CAPACITY)
+      const bulletsNeededForReload = CYLINDER_CAPACITY - bulletsInCylinder
+      const bulletsAddedForReload = Math.min(
+        bulletsNeededForReload,
+        spareBulletsRemaining
+      )
+      const newSpareBulletsRemaining = Math.max(
+        0,
+        spareBulletsRemaining - bulletsAddedForReload
+      )
+      setSpareBulletsRemaining(newSpareBulletsRemaining)
+
+      const newBulletsInCylinder = bulletsInCylinder + bulletsAddedForReload
+      setBulletsInCylinder(newBulletsInCylinder)
+
+      setCylinderRotationProps({
+        angle:
+          STARTING_ANGLE +
+          SHOT_ROTATION_ANGLE * (CYLINDER_CAPACITY - newBulletsInCylinder),
+      })
       setIsReloading(false)
     }, audioConfig.sprite.Reload[1] - 400)
-  }
+  }, [bulletsInCylinder, spareBulletsRemaining])
 
   const Image: React.FC = () => (
     <div css={styling}>
@@ -150,5 +171,10 @@ export const useRevolver = () => {
     </div>
   )
 
-  return { handleTriggerPull, Image, handleReload }
+  return {
+    handleTriggerPull,
+    Image,
+    handleReload,
+    spareBulletsRemaining,
+  }
 }
