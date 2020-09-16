@@ -19,7 +19,7 @@ const styling = css`
     bottom: 5px;
     right: 5px;
     border-radius: 5px;
-    border: 1px solid gra;
+    border: 1px solid gray;
     .gunImage {
       width: 45px;
       height: 45px;
