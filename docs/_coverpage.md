@@ -4,7 +4,7 @@
 
 > Step by step, with no steps skipped.
 
-- Learn marketable tools and skils
+- Learn marketable tools and skills
 - Work with tech that inspires you
 - Contribute to a massively multiplayer game
 
