@@ -31,10 +31,10 @@ const styling = css`
 `
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
-  const { handleTriggerPull, Image } = useRevolver()
+  const { handleTriggerPull, Image, handleReload } = useRevolver()
   return (
     <div css={styling} onTouchStart={handleTriggerPull}>
-      <div className="gunControl">
+      <div className="gunControl" onTouchStart={handleReload}>
         <div className="gunImage">
           <Image />
         </div>

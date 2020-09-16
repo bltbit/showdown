@@ -14,6 +14,12 @@ const styling = css`
     width: 100%;
     height: 100%;
     position: absolute;
+    &.spinning {
+      animation-name: spin;
+      animation-duration: 500ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -27,10 +33,9 @@ const styling = css`
         width: 13px;
         height: 13px;
         border-radius: 50%;
-        background-color: green;
       }
       & .bullet-spent {
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.6);
       }
       & .bullet-1 {
         top: 4px;
@@ -57,11 +62,20 @@ const styling = css`
         left: 22px;
       }
     }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
 `
 
 const STARTING_ANGLE = 33
 const SHOT_ROTATION_ANGLE = 60
+const MAX_BULLETS = 6
 
 export const useRevolver = () => {
   const [bulletsInCylinder, setBulletsInCylinder] = useState(CYLINDER_CAPACITY)
@@ -69,6 +83,7 @@ export const useRevolver = () => {
     angle: STARTING_ANGLE,
     config: { duration: 50 },
   }))
+  const [isReloading, setIsReloading] = useState(false)
 
   const gunStatusRef = useRef({ isBusy: false })
 
@@ -94,10 +109,23 @@ export const useRevolver = () => {
     howlRef.current?.play(SpriteNames.Bang)
   }, [bulletsInCylinder, cylinderRotationProps, setCylinderRotationProps])
 
+  const handleReload = () => {
+    console.log('reload')
+    if (gunStatusRef.current.isBusy) return
+    gunStatusRef.current.isBusy = true
+    setIsReloading(true)
+    howlRef.current?.play(SpriteNames.Reload)
+    setTimeout(() => {
+      gunStatusRef.current.isBusy = false
+      setBulletsInCylinder(MAX_BULLETS)
+      setIsReloading(false)
+    }, audioConfig.sprite.Reload[1] - 400)
+  }
+
   const Image: React.FC = () => (
     <div css={styling}>
       <animated.div
-        className="cylinder"
+        className={isReloading ? `cylinder spinning` : `cylinder`}
         style={{
           transform: cylinderRotationProps.angle.interpolate(
             (a) => `rotate(${a}deg)`
@@ -123,5 +151,5 @@ export const useRevolver = () => {
     </div>
   )
 
-  return { handleTriggerPull, Image }
+  return { handleTriggerPull, Image, handleReload }
 }
